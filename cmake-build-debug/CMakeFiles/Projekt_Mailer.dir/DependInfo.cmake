@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/steph/OneDrive - Berufsbildungszentrum Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/main.cpp" "CMakeFiles/Projekt_Mailer.dir/main.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/main.cpp.obj.d"
+  "D:/HF-SH/Software/Projektwoche/Projekt_Mailer/main.cpp" "CMakeFiles/Projekt_Mailer.dir/main.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
