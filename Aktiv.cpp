@@ -13,7 +13,7 @@ using namespace std;
 Aktiv::Aktiv(string telefon, string betrag)
     : Mitglieder(telefon), Geldbetrag(betrag) {}
 
-// Datenout-Methode für Aktiv-Mitglied
+
 void Aktiv::Datenout() const {
 
     cout << "Aktiv Mitglied: " << Nachname << ", " << Vorname << ", Tel: " << Telnummer << ", Betrag: " << Geldbetrag << endl;

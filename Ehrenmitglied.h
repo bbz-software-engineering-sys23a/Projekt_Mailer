@@ -17,4 +17,4 @@ public:
     Ehrenmitglied(string telefon, string betrag);
     void Datenout() const override;
 };
-#endif //EHRENMITGLIED_H
+#endif

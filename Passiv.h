@@ -19,4 +19,4 @@ public:
     void Datenout() const override;
 };
 
-#endif //PASSIV_H
+#endif

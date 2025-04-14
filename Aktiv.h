@@ -16,4 +16,4 @@ public:
     void Datenout() const override;
 };
 
-#endif //AKTIV_H
+#endif
