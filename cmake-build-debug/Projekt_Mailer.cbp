@@ -82,6 +82,30 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Aktiv.cpp">
+			<Option target="Projekt_Mailer"/>
+		</Unit>
+		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Aktiv.h">
+			<Option target="Projekt_Mailer"/>
+		</Unit>
+		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Ehrenmitglied.cpp">
+			<Option target="Projekt_Mailer"/>
+		</Unit>
+		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Ehrenmitglied.h">
+			<Option target="Projekt_Mailer"/>
+		</Unit>
+		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Mitglieder.cpp">
+			<Option target="Projekt_Mailer"/>
+		</Unit>
+		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Mitglieder.h">
+			<Option target="Projekt_Mailer"/>
+		</Unit>
+		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Passiv.cpp">
+			<Option target="Projekt_Mailer"/>
+		</Unit>
+		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Passiv.h">
+			<Option target="Projekt_Mailer"/>
+		</Unit>
 		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/main.cpp">
 			<Option target="Projekt_Mailer"/>
 		</Unit>

@@ -3,4 +3,10 @@ project(Projekt_Mailer)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Projekt_Mailer main.cpp)
+add_executable(Projekt_Mailer
+        main.cpp
+        Mitglieder.cpp
+        Aktiv.cpp
+        Passiv.cpp
+        Ehrenmitglied.cpp
+)

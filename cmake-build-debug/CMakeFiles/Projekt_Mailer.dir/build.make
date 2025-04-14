@@ -82,19 +82,83 @@ CMakeFiles/Projekt_Mailer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Projekt_Mailer.dir/main.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\main.cpp -o CMakeFiles\Projekt_Mailer.dir\main.cpp.s
 
+CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj: CMakeFiles/Projekt_Mailer.dir/flags.make
+CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj: C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Mitglieder.cpp
+CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj: CMakeFiles/Projekt_Mailer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj -MF CMakeFiles\Projekt_Mailer.dir\Mitglieder.cpp.obj.d -o CMakeFiles\Projekt_Mailer.dir\Mitglieder.cpp.obj -c C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Mitglieder.cpp
+
+CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Mitglieder.cpp > CMakeFiles\Projekt_Mailer.dir\Mitglieder.cpp.i
+
+CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Mitglieder.cpp -o CMakeFiles\Projekt_Mailer.dir\Mitglieder.cpp.s
+
+CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj: CMakeFiles/Projekt_Mailer.dir/flags.make
+CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj: C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Aktiv.cpp
+CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj: CMakeFiles/Projekt_Mailer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj -MF CMakeFiles\Projekt_Mailer.dir\Aktiv.cpp.obj.d -o CMakeFiles\Projekt_Mailer.dir\Aktiv.cpp.obj -c C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Aktiv.cpp
+
+CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Aktiv.cpp > CMakeFiles\Projekt_Mailer.dir\Aktiv.cpp.i
+
+CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Aktiv.cpp -o CMakeFiles\Projekt_Mailer.dir\Aktiv.cpp.s
+
+CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj: CMakeFiles/Projekt_Mailer.dir/flags.make
+CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj: C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Passiv.cpp
+CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj: CMakeFiles/Projekt_Mailer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj -MF CMakeFiles\Projekt_Mailer.dir\Passiv.cpp.obj.d -o CMakeFiles\Projekt_Mailer.dir\Passiv.cpp.obj -c C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Passiv.cpp
+
+CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Passiv.cpp > CMakeFiles\Projekt_Mailer.dir\Passiv.cpp.i
+
+CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Passiv.cpp -o CMakeFiles\Projekt_Mailer.dir\Passiv.cpp.s
+
+CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj: CMakeFiles/Projekt_Mailer.dir/flags.make
+CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj: C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Ehrenmitglied.cpp
+CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj: CMakeFiles/Projekt_Mailer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj -MF CMakeFiles\Projekt_Mailer.dir\Ehrenmitglied.cpp.obj.d -o CMakeFiles\Projekt_Mailer.dir\Ehrenmitglied.cpp.obj -c C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Ehrenmitglied.cpp
+
+CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Ehrenmitglied.cpp > CMakeFiles\Projekt_Mailer.dir\Ehrenmitglied.cpp.i
+
+CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\Ehrenmitglied.cpp -o CMakeFiles\Projekt_Mailer.dir\Ehrenmitglied.cpp.s
+
 # Object files for target Projekt_Mailer
 Projekt_Mailer_OBJECTS = \
-"CMakeFiles/Projekt_Mailer.dir/main.cpp.obj"
+"CMakeFiles/Projekt_Mailer.dir/main.cpp.obj" \
+"CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj" \
+"CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj" \
+"CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj" \
+"CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj"
 
 # External object files for target Projekt_Mailer
 Projekt_Mailer_EXTERNAL_OBJECTS =
 
 Projekt_Mailer.exe: CMakeFiles/Projekt_Mailer.dir/main.cpp.obj
+Projekt_Mailer.exe: CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj
+Projekt_Mailer.exe: CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj
+Projekt_Mailer.exe: CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj
+Projekt_Mailer.exe: CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj
 Projekt_Mailer.exe: CMakeFiles/Projekt_Mailer.dir/build.make
 Projekt_Mailer.exe: CMakeFiles/Projekt_Mailer.dir/linkLibs.rsp
 Projekt_Mailer.exe: CMakeFiles/Projekt_Mailer.dir/objects1.rsp
 Projekt_Mailer.exe: CMakeFiles/Projekt_Mailer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Projekt_Mailer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\kai0\OneDrive\Dokumente\GitHub\Projekt_Mailer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Projekt_Mailer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Projekt_Mailer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

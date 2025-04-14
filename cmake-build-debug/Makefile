@@ -128,6 +128,102 @@ Projekt_Mailer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/build
 .PHONY : Projekt_Mailer/fast
 
+Aktiv.obj: Aktiv.cpp.obj
+.PHONY : Aktiv.obj
+
+# target to build an object file
+Aktiv.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj
+.PHONY : Aktiv.cpp.obj
+
+Aktiv.i: Aktiv.cpp.i
+.PHONY : Aktiv.i
+
+# target to preprocess a source file
+Aktiv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.i
+.PHONY : Aktiv.cpp.i
+
+Aktiv.s: Aktiv.cpp.s
+.PHONY : Aktiv.s
+
+# target to generate assembly for a file
+Aktiv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.s
+.PHONY : Aktiv.cpp.s
+
+Ehrenmitglied.obj: Ehrenmitglied.cpp.obj
+.PHONY : Ehrenmitglied.obj
+
+# target to build an object file
+Ehrenmitglied.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj
+.PHONY : Ehrenmitglied.cpp.obj
+
+Ehrenmitglied.i: Ehrenmitglied.cpp.i
+.PHONY : Ehrenmitglied.i
+
+# target to preprocess a source file
+Ehrenmitglied.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.i
+.PHONY : Ehrenmitglied.cpp.i
+
+Ehrenmitglied.s: Ehrenmitglied.cpp.s
+.PHONY : Ehrenmitglied.s
+
+# target to generate assembly for a file
+Ehrenmitglied.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.s
+.PHONY : Ehrenmitglied.cpp.s
+
+Mitglieder.obj: Mitglieder.cpp.obj
+.PHONY : Mitglieder.obj
+
+# target to build an object file
+Mitglieder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj
+.PHONY : Mitglieder.cpp.obj
+
+Mitglieder.i: Mitglieder.cpp.i
+.PHONY : Mitglieder.i
+
+# target to preprocess a source file
+Mitglieder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.i
+.PHONY : Mitglieder.cpp.i
+
+Mitglieder.s: Mitglieder.cpp.s
+.PHONY : Mitglieder.s
+
+# target to generate assembly for a file
+Mitglieder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.s
+.PHONY : Mitglieder.cpp.s
+
+Passiv.obj: Passiv.cpp.obj
+.PHONY : Passiv.obj
+
+# target to build an object file
+Passiv.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj
+.PHONY : Passiv.cpp.obj
+
+Passiv.i: Passiv.cpp.i
+.PHONY : Passiv.i
+
+# target to preprocess a source file
+Passiv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.i
+.PHONY : Passiv.cpp.i
+
+Passiv.s: Passiv.cpp.s
+.PHONY : Passiv.s
+
+# target to generate assembly for a file
+Passiv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.s
+.PHONY : Passiv.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +257,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Projekt_Mailer
+	@echo ... Aktiv.obj
+	@echo ... Aktiv.i
+	@echo ... Aktiv.s
+	@echo ... Ehrenmitglied.obj
+	@echo ... Ehrenmitglied.i
+	@echo ... Ehrenmitglied.s
+	@echo ... Mitglieder.obj
+	@echo ... Mitglieder.i
+	@echo ... Mitglieder.s
+	@echo ... Passiv.obj
+	@echo ... Passiv.i
+	@echo ... Passiv.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
