@@ -1,9 +1,13 @@
 #include <iostream>
 #include <fstream>
+#include <windows.h>
 using namespace std;
+
+
 
 int main()
 {
+    SetConsoleOutputCP(CP_UTF8);
     bool x = true;
     while (x == true) {
 
