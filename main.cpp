@@ -17,7 +17,7 @@ void datenAusgeben();
 
 void mailVersenden();
 
-void falscheingabeAbfangen(string eingabe);
+string falscheingabeAbfangen(const string &eingabe, int i, const string &text);
 
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
@@ -126,11 +126,13 @@ void datenErfassen() {
     cout << "Bitte geben Sie die Telefonnummer beginnend mit 00 an: " << endl;
     cin >> telefonnummer;
     cout << "\n" << endl;
-    cout << "Bitte geben Sie das Geschlecht an:\n1) Männlich\n2) Weiblich\n3) Unbekannt" << endl;
-    cin >> geschlecht;
+    cout << "Bitte geben sie das Geschlecht des Mitglieds an:\n1) Weiblich\n2) Männlich\n3) Neutral" << endl;
+    cin >> eingabe;
+    eingabe = falscheingabeAbfangen(eingabe,3,"Bitte geben sie das Geschlecht des Mitglieds an:\n1) Weiblich\n2) Männlich\n3) Neutral");
     cout << "\n" << endl;
-    cout << "Bitte geben Sie den Status des Mitglieds an:\n1) Aktives Mitglied\n2)Passives Mitglied\nEhrenmitglied\n" << endl;
-    cin >> falscheingabeAbfangen(eingabe);
+    cout << "Bitte geben Sie den Status des Mitglieds an:\n1) Aktives Mitglied\n2) Passives Mitglied\n3) Ehrenmitglied\n" << endl;
+    cin >> eingabe;
+    eingabe = falscheingabeAbfangen(eingabe,3,"Bitte geben Sie den Status des Mitglieds an:\n1) Aktives Mitglied\n2) Passives Mitglied\n3) Ehrenmitglied\n");
     cout << "\n" << endl;
 
     schreiben_csv(mitgliedernummer, nachname, vorname, strasse, hausnummer,
@@ -150,17 +152,32 @@ void mailVersenden() {
 }
 
 
-void falscheingabeAbfangen(string eingabe) {
+string falscheingabeAbfangen(const string &eingabe, int i,const string &text) {
     int auswahl;
-    try {
-        auswahl = stoi(eingabe);
-    } catch(const invalid_argument&) {
-        cout << "Ungültige Eingabe\n" << endl;
-        continue;
-    } catch(const out_of_range&) {
-        cout << "Ungültige Eingabe\n" << endl;
-        continue;
+    string input = eingabe;
+    while (true) {
+        try {
+            auswahl = stoi(input);
+            } catch(const invalid_argument&) {
+                cout << "Ungültige Eingabe\n" << endl;
+                cout << text << endl;
+                cin >> input;
+                continue;
+            } catch(const out_of_range&) {
+                cout << "Ungültige Eingabe\n" << endl;
+                cout << text << endl;
+                cin >> input;
+                continue;
+        }
+        if (auswahl < 1 || auswahl > i) {
+            cout << "Ungültige Eingabe\n" << endl;
+            cout << text << endl;
+            cin >> input;
+            continue;
+        }
+        break;
     }
+    return to_string(auswahl);
 }
 
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
