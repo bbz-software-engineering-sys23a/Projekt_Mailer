@@ -16,5 +16,5 @@ Aktiv::Aktiv(string telefon, string betrag)
 
 void Aktiv::Datenout() const {
 
-    cout << "Aktiv Mitglied: " << Nachname << ", " << Vorname << ", Geschlecht: " << Geschlecht << ", Tel: " << Telnummer << ", Betrag: " << Geldbetrag << endl;
+    cout << "Aktiv Mitglied: " << Nachname << ", " << Vorname << ", Geschlecht: " << Geschlecht << ", Tel: " << Telnummer << ", Betrag: " << Geldbetrag <<" , Mitgliedernr." << getMitgliedernummer() << endl;
 }

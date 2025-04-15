@@ -16,7 +16,7 @@ Passiv::Passiv(string telefon, string betrag)
 
 void Passiv::Datenout() const {
 
-    cout << "Passiv Mitglied: " << Nachname << ", " << Vorname << ", Geschlecht: " << Geschlecht << ", Tel: " << Telnummer << ", Betrag: " << Geldbetrag << endl;
+    cout << "Passiv Mitglied: " << Nachname << ", " << Vorname << ", Geschlecht: " << Geschlecht << ", Tel: " << Telnummer << ", Betrag: " << Geldbetrag <<", Mitgliedernr. "<< getMitgliedernummer() << endl;
 }
 
 
