@@ -118,11 +118,13 @@ void datenErfassen() {
     cout << "\n" << endl;
     cout << "Bitte geben Sie die Hausnummer an: " << endl;
     cin >> eingabe;
-    hausnummer = falscheingabeAbfangen(eingabe,2,0,"Bitte geben Sie die Hausnummer an: ");
-    //cin >> hausnummer;
+    auswahl = falscheingabeAbfangen(eingabe,2,0,"Bitte geben Sie die Hausnummer an: ");
+    hausnummer = to_string(auswahl);
     cout << "\n" << endl;
     cout << "Bitte geben Sie die PLZ an: " << endl;
-    cin >> plz;
+    cin >> eingabe;
+    auswahl = falscheingabeAbfangen(eingabe,2,0,"Bitte geben Sie die PLZ an: ");
+    plz = to_string(auswahl);
     cout << "\n" << endl;
     cout << "Bitte geben Sie den Wohnort an: " << endl;
     cin >> wohnort;
@@ -130,8 +132,10 @@ void datenErfassen() {
     cout << "Bitte geben Sie die E-Mail Adresse an: " << endl;
     cin >> email;
     cout << "\n" << endl;
-    cout << "Bitte geben Sie die Telefonnummer beginnend mit 00 an: " << endl;
-    cin >> telefonnummer;
+    cout << "Bitte geben Sie die Telefonnummer an: " << endl;
+    cin >> eingabe;
+    auswahl = falscheingabeAbfangen(eingabe,2,0,"Bitte geben Sie die Telefonnummer an: ");
+    telefonnummer = "0041" + to_string(auswahl);
     cout << "\n" << endl;
     cout << "Bitte geben sie das Geschlecht des Mitglieds an:\n1) Weiblich\n2) Männlich\n3) Neutral" << endl;
     cin >> eingabe;
@@ -184,7 +188,7 @@ void mailVersenden() {
 int falscheingabeAbfangen(const string &eingabe,int x, int i,const string &text) {
     int auswahl;
     string input = eingabe;
-    if (x = 1) {
+    if (x == 1) {
         while (true) {
             try {
                 auswahl = stoi(input);
@@ -210,21 +214,20 @@ int falscheingabeAbfangen(const string &eingabe,int x, int i,const string &text)
         return auswahl;
 
     }
-    else if (x = 2) {
+    else if (x == 2) {
         while (true) {
             try {
                 auswahl = stoi(input);
-                catch(const invalid_argument&) {
-                    cout << "Ungültige Eingabe\n" << endl;
-                    cout << text << endl;
-                    cin >> input;
-                    continue;
-                } catch(const out_of_range&) {
-                    cout << "Ungültige Eingabe\n" << endl;
-                    cout << text << endl;
-                    cin >> input;
-                    continue;
-                }
+            }catch(const invalid_argument&) {
+                cout << "Ungültige Eingabe\n" << endl;
+                cout << text << endl;
+                cin >> input;
+                continue;
+            } catch(const out_of_range&) {
+                cout << "Ungültige Eingabe\n" << endl;
+                cout << text << endl;
+                cin >> input;
+                continue;
             }
             break;
         }
