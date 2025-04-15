@@ -17,7 +17,6 @@ int main()
 
 int schreiben_csv()
 {
-    char mitgliedNummer;
 
     //Kontrollieren ob Datei existiert.
     std::string dateiname = "adresse.csv";
@@ -53,6 +52,7 @@ int schreiben_csv()
             {
             {"Mitglied-Nr.","Name","Vorame","PLZ","Wohnort","E-Mail", "Tel.Nr.","Typ",},
             };
+
         for (const auto& row : data)
             {
             for (size_t i = 0; i < row.size(); i++)
