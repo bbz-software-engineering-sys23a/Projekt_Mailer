@@ -3,13 +3,18 @@
 #include <sstream>
 #include <string>
 #include <windows.h>
+#include <vector>
+#include <filesystem>
+
+#include "Mitglieder.h"
+#include "Ehrenmitglied.h"
+#include "Aktiv.h"
+#include "Passiv.h"
+
+
 using namespace std;
 
 
-
-#include <fstream>
-#include <vector>
-#include <filesystem>
 
 void datenErfassen();
 
@@ -17,7 +22,7 @@ void datenAusgeben();
 
 void mailVersenden();
 
-string falscheingabeAbfangen(const string &eingabe, int i, const string &text);
+int falscheingabeAbfangen(const string &eingabe,int x, int i, const string &text);
 
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
@@ -99,7 +104,7 @@ void datenErfassen() {
 
     string mitgliedernummer;
     string eingabe;
-    string auswahl;
+    int auswahl;
 
     cout << "Daten Erfassen\n" << endl;
     cout << "Bitte geben Sie den Nachnamen an: " << endl;
@@ -112,7 +117,9 @@ void datenErfassen() {
     cin >> strasse;
     cout << "\n" << endl;
     cout << "Bitte geben Sie die Hausnummer an: " << endl;
-    cin >> hausnummer;
+    cin >> eingabe;
+    hausnummer = falscheingabeAbfangen(eingabe,2,0,"Bitte geben Sie die Hausnummer an: ");
+    //cin >> hausnummer;
     cout << "\n" << endl;
     cout << "Bitte geben Sie die PLZ an: " << endl;
     cin >> plz;
@@ -128,11 +135,33 @@ void datenErfassen() {
     cout << "\n" << endl;
     cout << "Bitte geben sie das Geschlecht des Mitglieds an:\n1) Weiblich\n2) Männlich\n3) Neutral" << endl;
     cin >> eingabe;
-    eingabe = falscheingabeAbfangen(eingabe,3,"Bitte geben sie das Geschlecht des Mitglieds an:\n1) Weiblich\n2) Männlich\n3) Neutral");
+    auswahl = falscheingabeAbfangen(eingabe,1,3,"Bitte geben sie das Geschlecht des Mitglieds an:\n1) Weiblich\n2) Männlich\n3) Neutral");
+    switch (auswahl) {
+        case 1:
+            geschlecht = "W";
+        break;
+        case 2:
+            geschlecht = "M";
+        break;
+        case 3:
+            geschlecht = "N";
+        break;
+    }
     cout << "\n" << endl;
     cout << "Bitte geben Sie den Status des Mitglieds an:\n1) Aktives Mitglied\n2) Passives Mitglied\n3) Ehrenmitglied\n" << endl;
     cin >> eingabe;
-    eingabe = falscheingabeAbfangen(eingabe,3,"Bitte geben Sie den Status des Mitglieds an:\n1) Aktives Mitglied\n2) Passives Mitglied\n3) Ehrenmitglied\n");
+    auswahl = falscheingabeAbfangen(eingabe,1,3,"Bitte geben Sie den Status des Mitglieds an:\n1) Aktives Mitglied\n2) Passives Mitglied\n3) Ehrenmitglied\n");
+    switch (auswahl) {
+        case 1:
+            typ = "A";
+        break;
+        case 2:
+            typ = "P";
+        break;
+        case 3:
+            typ = "E";
+        break;
+    }
     cout << "\n" << endl;
 
     schreiben_csv(mitgliedernummer, nachname, vorname, strasse, hausnummer,
@@ -152,12 +181,13 @@ void mailVersenden() {
 }
 
 
-string falscheingabeAbfangen(const string &eingabe, int i,const string &text) {
+int falscheingabeAbfangen(const string &eingabe,int x, int i,const string &text) {
     int auswahl;
     string input = eingabe;
-    while (true) {
-        try {
-            auswahl = stoi(input);
+    if (x = 1) {
+        while (true) {
+            try {
+                auswahl = stoi(input);
             } catch(const invalid_argument&) {
                 cout << "Ungültige Eingabe\n" << endl;
                 cout << text << endl;
@@ -168,16 +198,38 @@ string falscheingabeAbfangen(const string &eingabe, int i,const string &text) {
                 cout << text << endl;
                 cin >> input;
                 continue;
+            }
+            if (auswahl < 1 || auswahl > i) {
+                cout << "Ungültige Eingabe\n" << endl;
+                cout << text << endl;
+                cin >> input;
+                continue;
+            }
+            break;
         }
-        if (auswahl < 1 || auswahl > i) {
-            cout << "Ungültige Eingabe\n" << endl;
-            cout << text << endl;
-            cin >> input;
-            continue;
-        }
-        break;
+        return auswahl;
+
     }
-    return to_string(auswahl);
+    else if (x = 2) {
+        while (true) {
+            try {
+                auswahl = stoi(input);
+                catch(const invalid_argument&) {
+                    cout << "Ungültige Eingabe\n" << endl;
+                    cout << text << endl;
+                    cin >> input;
+                    continue;
+                } catch(const out_of_range&) {
+                    cout << "Ungültige Eingabe\n" << endl;
+                    cout << text << endl;
+                    cin >> input;
+                    continue;
+                }
+            }
+            break;
+        }
+        return auswahl;
+    }
 }
 
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
