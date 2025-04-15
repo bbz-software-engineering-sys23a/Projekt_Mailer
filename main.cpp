@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -8,6 +7,15 @@ using namespace std;
 
 
 
+#include <fstream>
+#include <vector>
+#include <filesystem>
+
+
+
+
+bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
+    string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
 
 int main()
 {
@@ -83,4 +91,44 @@ void datenAusgeben() {
 
 void mailVersenden() {
     cout << "Mail Versenden\n" << endl;
+}
+bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
+    string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ)
+{
+    const std::string dateiname = "adresse.csv";
+    const std::vector<std::string> spalten = {
+        "Mitglied-Nr.", "Name", "Vorname","Strasse","Hausnummer" ,"PLZ", "Wohnort", "E-Mail", "Tel.Nr.", "Geschlecht","Typ"
+    };
+
+
+    bool dateiExistiert = std::filesystem::exists(dateiname);
+
+    std::ofstream datei(dateiname, std::ios::app);
+    if (!datei) {
+        std::cerr << "Fehler bein oeffnen der Datei!" << std::endl;
+        return false;
+    }
+
+    if (!dateiExistiert) {
+        for (size_t i = 0; i < spalten.size(); ++i) {
+            datei << spalten[i];
+            if (i < spalten.size() - 1) datei << ";";
+        }
+        datei << '\n';
+        std::cout << "Datei erstellt und Spaltenueberschriften eingefuegt." << std::endl;
+    }
+    datei   << mitgliedernummer <<";"
+            << nachname << ";"
+            << vorname << ";"
+            << strasse << ";"
+            << hausnummer << ";"
+            << plz << ";"
+            << wohnort << ";"
+            << email << ";"
+            << telefonnummer << ";"
+            << geschlecht << ";"
+            << typ << '\n';
+
+    std::cout << "Adresszeile erfolgreich hinzugefuegt!" << std::endl;
+    return true;
 }
