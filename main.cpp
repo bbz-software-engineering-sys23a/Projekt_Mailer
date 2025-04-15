@@ -17,7 +17,7 @@ void datenAusgeben();
 
 void mailVersenden();
 
-void falscheingabeAbfangen();
+void falscheingabeAbfangen(string eingabe);
 
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
@@ -98,6 +98,7 @@ void datenErfassen() {
     string typ;
 
     string mitgliedernummer;
+    string eingabe;
     string auswahl;
 
     cout << "Daten Erfassen\n" << endl;
@@ -129,7 +130,7 @@ void datenErfassen() {
     cin >> geschlecht;
     cout << "\n" << endl;
     cout << "Bitte geben Sie den Status des Mitglieds an:\n1) Aktives Mitglied\n2)Passives Mitglied\nEhrenmitglied\n" << endl;
-    cin >> auswahl;
+    cin >> falscheingabeAbfangen(eingabe);
     cout << "\n" << endl;
 
     schreiben_csv(mitgliedernummer, nachname, vorname, strasse, hausnummer,
@@ -149,8 +150,17 @@ void mailVersenden() {
 }
 
 
-void falscheingabeAbfangen() {
-
+void falscheingabeAbfangen(string eingabe) {
+    int auswahl;
+    try {
+        auswahl = stoi(eingabe);
+    } catch(const invalid_argument&) {
+        cout << "Ungültige Eingabe\n" << endl;
+        continue;
+    } catch(const out_of_range&) {
+        cout << "Ungültige Eingabe\n" << endl;
+        continue;
+    }
 }
 
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
