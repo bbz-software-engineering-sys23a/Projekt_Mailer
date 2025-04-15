@@ -11,8 +11,13 @@ using namespace std;
 #include <vector>
 #include <filesystem>
 
+void datenErfassen();
 
+void datenAusgeben();
 
+void mailVersenden();
+
+void falscheingabeAbfangen();
 
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
@@ -22,18 +27,20 @@ int main()
     SetConsoleOutputCP(CP_UTF8);
 
     bool x = true;
-    int mitgliedernummer = 0;
-    string vorname;
+    //const int  mitgliedernummer;
     string nachname;
-    int plz;
-    string wohnohrt;
-    string mail;
-    string telefon;
+    string vorname;
+    string strasse;
+    string hausnummer;
+    string plz;
+    string wohnort;
+    string email;
+    string telefonnummer;
+    string geschlecht;
     string typ;
 
-    void datenErfassen();
-    void datenAusgeben();
-    void mailVersenden();
+
+
 
     while (x == true) {
         string eingabe;
@@ -78,7 +85,55 @@ int main()
 
 
 void datenErfassen() {
+
+    string nachname;
+    string vorname;
+    string strasse;
+    string hausnummer;
+    string plz;
+    string wohnort;
+    string email;
+    string telefonnummer;
+    string geschlecht;
+    string typ;
+
+    string mitgliedernummer;
+    string auswahl;
+
     cout << "Daten Erfassen\n" << endl;
+    cout << "Bitte geben Sie den Nachnamen an: " << endl;
+    cin >> nachname;
+    cout << "\n" << endl;
+    cout << "Bitte geben Sie den vorname an: " << endl;
+    cin >> vorname;
+    cout << "\n" << endl;
+    cout << "Bitte geben Sie die strasse an: " << endl;
+    cin >> strasse;
+    cout << "\n" << endl;
+    cout << "Bitte geben Sie die Hausnummer an: " << endl;
+    cin >> hausnummer;
+    cout << "\n" << endl;
+    cout << "Bitte geben Sie die PLZ an: " << endl;
+    cin >> plz;
+    cout << "\n" << endl;
+    cout << "Bitte geben Sie den Wohnort an: " << endl;
+    cin >> wohnort;
+    cout << "\n" << endl;
+    cout << "Bitte geben Sie die E-Mail Adresse an: " << endl;
+    cin >> email;
+    cout << "\n" << endl;
+    cout << "Bitte geben Sie die Telefonnummer beginnend mit 00 an: " << endl;
+    cin >> telefonnummer;
+    cout << "\n" << endl;
+    cout << "Bitte geben Sie das Geschlecht an:\n1) Männlich\n2) Weiblich\n3) Unbekannt" << endl;
+    cin >> geschlecht;
+    cout << "\n" << endl;
+    cout << "Bitte geben Sie den Status des Mitglieds an:\n1) Aktives Mitglied\n2)Passives Mitglied\nEhrenmitglied\n" << endl;
+    cin >> auswahl;
+    cout << "\n" << endl;
+
+    schreiben_csv(mitgliedernummer, nachname, vorname, strasse, hausnummer,
+        plz,wohnort,email,telefonnummer,geschlecht,typ);
 }
 
 
@@ -92,6 +147,12 @@ void datenAusgeben() {
 void mailVersenden() {
     cout << "Mail Versenden\n" << endl;
 }
+
+
+void falscheingabeAbfangen() {
+
+}
+
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ)
 {
