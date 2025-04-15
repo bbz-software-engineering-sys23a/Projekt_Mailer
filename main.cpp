@@ -82,4 +82,3 @@ void mailVersenden() {
     cout << "Mail Versenden\n" << endl;
 }
 
-w
