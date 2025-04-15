@@ -1,6 +1,6 @@
 # Projekt_Mailer
 
-Autoren: Kai Knesevic / Peter Meier / Stephan Fankhauser
+Autoren: Kai Knezevic / Peter Meier / Stephan Fankhauser
 
 Das Projekt beinhaltet eine Software, welche Daten von Vereinsmitgliedern erfasst und in einer CSV Datei speichert.
 Die Daten der CSV Datei können danach auf der Kommandozeile als einzelner Datensatz oder als komplette Liste wieder ausgegeben werden.
