@@ -16,5 +16,5 @@ Ehrenmitglied::Ehrenmitglied(string telefon, string betrag)
 
 
 void Ehrenmitglied::Datenout() const {
-    cout << "Ehrenmitglied: " << Nachname << ", " << Vorname << ", Tel: " << Telnummer << ", Betrag: " << Geldbetrag << endl;
+    cout << "Ehrenmitglied: " << Nachname << ", " << Vorname << ", Geschlecht: " << Geschlecht << ", Tel: " << Telnummer << ", Betrag: " << Geldbetrag << endl;
 }

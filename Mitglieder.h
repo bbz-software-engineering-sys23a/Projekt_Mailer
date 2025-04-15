@@ -17,6 +17,7 @@ protected:
 public:
     string Nachname;
     string Vorname;
+    string Geschlecht;
     string email;
     string Strasse;
     string Hausnummer;

@@ -10,15 +10,13 @@
 
 using namespace std;
 
-#include "Passiv.h"
-
 Passiv::Passiv(string telefon, string betrag)
     : Mitglieder(telefon), Geldbetrag(betrag) {}
 
 
 void Passiv::Datenout() const {
 
-    cout << "Passiv Mitglied: " << Nachname << ", " << Vorname << ", Tel: " << Telnummer << ", Betrag: " << Geldbetrag << endl;
+    cout << "Passiv Mitglied: " << Nachname << ", " << Vorname << ", Geschlecht: " << Geschlecht << ", Tel: " << Telnummer << ", Betrag: " << Geldbetrag << endl;
 }
 
 

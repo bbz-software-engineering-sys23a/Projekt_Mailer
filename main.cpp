@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
 
-    string vorname, nachname, email, strasse, hausnummer, plz, wohnort, telefon, geldbetrag;
+    string vorname, nachname, geschlecht, email, strasse, hausnummer, plz, wohnort, telefon, geldbetrag;
     int mitgliedsart;
 
 
@@ -20,6 +20,9 @@ int main() {
 
     cout << "Nachname: ";
     cin >> nachname;
+
+    cout << "geben sie ihr geschlecht an: ";
+    cin >> geschlecht;
 
     cout << "E-Mail: ";
     cin >> email;
@@ -64,6 +67,7 @@ int main() {
 
     mitglied->Vorname = vorname;
     mitglied->Nachname = nachname;
+    mitglied->Geschlecht = geschlecht;
     mitglied->email = email;
     mitglied->Strasse = strasse;
     mitglied->Hausnummer = hausnummer;
@@ -72,8 +76,6 @@ int main() {
 
 
     mitglied->Datenout();
-
-
     delete mitglied;
 
     return 0;

@@ -2,12 +2,13 @@
 // Created by kai0 on 14/04/2025.
 //
 #include "Mitglieder.h"
+#include <string>
 
 int Mitglieder::MitgliedernummerCounter = 1;
 
 Mitglieder::Mitglieder(string telefon) : Telnummer(telefon) {
     Mitgliedernummer = "Mitglied " + to_string(MitgliedernummerCounter);
-    MitgliedernummerCounter++;  // Erhöhen des Zählers für die nächste Mitgliedernummer
+    MitgliedernummerCounter++;
 }
 string Mitglieder::getMitgliedernummer() const {
     return Mitgliedernummer;
@@ -19,6 +20,7 @@ string Mitglieder::getTelnummer() const {
 void Mitglieder::Datenout() const {
     cout << "Vorname: " << Vorname << endl;
     cout << "Nachname: " << Nachname << endl;
+    cout << "Geschlecht: " << Geschlecht << endl;
     cout << "Email: " << email << endl;
     cout << "Strasse: " << Strasse << endl;
     cout << "Hausnummer: " << Hausnummer << endl;
