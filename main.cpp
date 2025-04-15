@@ -3,7 +3,5 @@
 int main()
 {
     std::cout << "Hello, World!" << std::endl;
-
-    int x;
     return 0;
 }
