@@ -275,3 +275,5 @@ bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string
     std::cout << "Adresszeile erfolgreich hinzugefuegt!" << std::endl;
     return true;
 }
+
+//cout << "Blök" << endl;
