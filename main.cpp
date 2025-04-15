@@ -3,89 +3,73 @@
 #include <vector>
 #include <filesystem>
 #include <string>
+
 using namespace std;
-int schreiben_csv();
-int lesen_csv();
+
+
+
+bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
+    string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
 
 int main()
 {
-   schreiben_csv();
+    string mitgliedernummer="2";
+    string nachname ="Muellerr";
+    string vorname="Peter";
+    string geschlecht="w";
+    string email="pm@ffch";
+    string strasse="Rheinstrasse.";
+    string hausnummer="48";
+    string plz="8200";
+    string wohnort="Schaffhausen";
+    string typ="a";
+    string telefonnummer = "052111222";
+
+    if (!schreiben_csv( mitgliedernummer,nachname,vorname,strasse, hausnummer,
+                        plz, wohnort, email, telefonnummer, geschlecht,typ)) {
+        std::cerr << "Ein Fehler ist aufgetreten." << std::endl;
+        return 1;
+    }
     return 0;
 }
-//END main
 
-
-int schreiben_csv()
+bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
+    string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ)
 {
+    const std::string dateiname = "adresse.csv";
+    const std::vector<std::string> spalten = {
+        "Mitglied-Nr.", "Name", "Vorname","Strasse","Hausnummer" ,"PLZ", "Wohnort", "E-Mail", "Tel.Nr.", "Geschlecht","Typ"
+    };
 
-    //Kontrollieren ob Datei existiert.
-    std::string dateiname = "adresse.csv";
 
-    if (std::filesystem::exists(dateiname))
-        {
-        std::cout << "Die Datei existiert." << std::endl;
+    bool dateiExistiert = std::filesystem::exists(dateiname);
 
-        // Öffne Datei im Anhängemodus
-        std::ofstream datei(dateiname, std::ios::app);
+    std::ofstream datei(dateiname, std::ios::app);
+    if (!datei) {
+        std::cerr << "Fehler bein oeffnen der Datei!" << std::endl;
+        return false;
+    }
 
-        // Überprüfen, ob Datei geöffnet werden konnte
-        if (!datei)
-            {
-            std::cerr << "Fehler beim oeffnen der Datei!" << std::endl;
-            return 1;
-            }
-
-        // Neue Adresszeile (zum Beispiel: Name, Straße, Stadt, PLZ)
-        datei  <<"109;Meier;Peter;8200;Schaffhausen;rr@ee;0529988978;Aktiv" <<std::endl;
-
-        // Datei schließen (optional, da der Destruktor das auch macht)
-        datei.close();
-
-        std::cout << "Adresszeile erfolgreich hinzugefuegt!" << std::endl;
-        return 0 ;
-       }
-    else
-        {
-        std::cout << "Die Datei existiert nicht." << std::endl;
-        std::ofstream file("adresse.csv");
-        std::vector<std::vector<std::string>> data =
-            {
-            {"Mitglied-Nr.","Name","Vorame","PLZ","Wohnort","E-Mail", "Tel.Nr.","Typ",},
-            };
-
-        for (const auto& row : data)
-            {
-            for (size_t i = 0; i < row.size(); i++)
-                {
-                file << row[i];
-                if (i < row.size() - 1) file << ";";
-                }
-            file << "\n";
-            }
-        std::cout<<"Datei erstellt" <<std::endl;
-        std::cout<<"Spaltentexte eingefuellt" <<std::endl;
-        return 0 ;
+    if (!dateiExistiert) {
+        for (size_t i = 0; i < spalten.size(); ++i) {
+            datei << spalten[i];
+            if (i < spalten.size() - 1) datei << ";";
         }
-}//END int schreiben_csv()
+        datei << '\n';
+        std::cout << "Datei erstellt und Spaltenueberschriften eingefuegt." << std::endl;
+    }
+    datei   << mitgliedernummer <<";"
+            << nachname << ";"
+            << vorname << ";"
+            << strasse << ";"
+            << hausnummer << ";"
+            << plz << ";"
+            << wohnort << ";"
+            << email << ";"
+            << telefonnummer << ";"
+            << geschlecht << ";"
+            << typ << '\n';
 
-int lesen_csv()
-{
-
-
+    std::cout << "Adresszeile erfolgreich hinzugefuegt!" << std::endl;
+    return true;
 }
-//END int lesen_csv();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
