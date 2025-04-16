@@ -287,13 +287,38 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y,const string &text)
     }
 }
 
-int betragAnpassen() {
+void betragAnpassen() {
     string beitragAnpassen;
     string eingabe;
     int auswahl;
     cout << Texte::Was_2 + Texte::Auswahl_2 << endl;
     cin >> eingabe;
     auswahl = falscheingabeAbfangen(eingabe,1,3,Texte::Was_2 + Texte::Auswahl_2);
+    cout << "\n" << endl;
+
+    switch (auswahl) {
+        case 1:
+            cout << Texte::Bitte_1 + Texte::Betrag << endl;
+            cin >> eingabe;
+            auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Betrag);
+            beitragAnpassen = auswahl;
+            Aktiv::setDefaultBeitrag(beitragAnpassen);
+        break;
+        case 2:
+            cout << Texte::Bitte_1 + Texte::Betrag << endl;
+            cin >> eingabe;
+            auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Betrag);
+            beitragAnpassen = auswahl;
+            Passiv::setDefaultBeitrag(beitragAnpassen);
+        break;
+        case 3:
+            cout << Texte::Bitte_1 + Texte::Betrag << endl;
+            cin >> eingabe;
+            auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Betrag);
+            beitragAnpassen = auswahl;
+            Ehrenmitglied::setDefaultBeitrag(beitragAnpassen);
+        break;
+    }
 }
 
 
