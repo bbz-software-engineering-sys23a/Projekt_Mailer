@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj"
   "CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj.d"
-  "CMakeFiles/Projekt_Mailer.dir/Ausgabetexte.cpp.obj"
-  "CMakeFiles/Projekt_Mailer.dir/Ausgabetexte.cpp.obj.d"
   "CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj"
   "CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj.d"
   "CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj"

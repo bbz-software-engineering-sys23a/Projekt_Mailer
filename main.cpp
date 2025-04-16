@@ -10,7 +10,8 @@
 #include "Ehrenmitglied.h"
 #include "Aktiv.h"
 #include "Passiv.h"
-#include "Ausgabetexte.h"
+#include "Texte.h"
+
 
 
 using namespace std;
@@ -39,14 +40,14 @@ int main()
     string eingabe;
     int auswahl;
 
-    cout << "Guten Tag\n" << endl;
+    cout << Texte::Begrüssung << endl;
     // Schleife mit Abbruchbedingung Programm
     while (x == true) {
 
-        cout << "Was möchten sie tun? \n 1) Daten erfassen \n 2) Daten anzeigen \n 3) Ein Mail versenden \n 4) Das Programm beenden\n" << endl;
+        cout << Texte::Was + Texte::Auswahl_1 << endl;
         cin >> eingabe;
 
-        auswahl = falscheingabeAbfangen(eingabe,1,4,"Was möchten sie tun? \n 1) Daten erfassen \n 2) Daten anzeigen \n 3) Ein Mail versenden \n 4) Das Programm beenden\n");
+        auswahl = falscheingabeAbfangen(eingabe,1,4,Texte::Was + Texte::Auswahl_1);
 
 
         switch (auswahl) {
@@ -85,45 +86,45 @@ void datenErfassen() {
     string geschlecht;
     string typ;
 
-    //string mitgliedernummer;
+    string mitgliedernummer;
 
     string eingabe;
     int auswahl;
 
     //cout << "Daten Erfassen\n" << endl;
-    cout << "Bitte geben Sie den Nachnamen an: " << endl;
+    cout << Texte::Bitte_1 + Texte::Nachname << endl;
     cin >> nachname;
     cout << "\n" << endl;
-    cout << "Bitte geben Sie den vorname an: " << endl;
+    cout << Texte::Bitte_1 + Texte::Vorname << endl;
     cin >> vorname;
     cout << "\n" << endl;
-    cout << "Bitte geben Sie die Strasse an: " << endl;
+    cout << Texte::Bitte_1 + Texte::Strasse << endl;
     cin >> strasse;
     cout << "\n" << endl;
-    cout << "Bitte geben Sie die Hausnummer an: " << endl;
+    cout << Texte::Bitte_1 + Texte::Hausnummer << endl;
     cin >> eingabe;
-    auswahl = falscheingabeAbfangen(eingabe,2,0,"Bitte geben Sie die Hausnummer an: ");
+    auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Hausnummer );
     hausnummer = to_string(auswahl);
     cout << "\n" << endl;
-    cout << "Bitte geben Sie die PLZ an: " << endl;
+    cout << Texte::Bitte_1 + Texte::PLZ << endl;
     cin >> eingabe;
-    auswahl = falscheingabeAbfangen(eingabe,2,0,"Bitte geben Sie die PLZ an: ");
+    auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::PLZ);
     plz = to_string(auswahl);
     cout << "\n" << endl;
-    cout << "Bitte geben Sie den Wohnort an: " << endl;
+    cout << Texte::Bitte_1 + Texte::Wohnort << endl;
     cin >> wohnort;
     cout << "\n" << endl;
-    cout << "Bitte geben Sie die E-Mail Adresse an: " << endl;
+    cout << Texte::Bitte_1 + Texte::Mail << endl;
     cin >> email;
     cout << "\n" << endl;
-    cout << "Bitte geben Sie die Telefonnummer an: " << endl;
+    cout << Texte::Bitte_1 + Texte::Phone << endl;
     cin >> eingabe;
-    auswahl = falscheingabeAbfangen(eingabe,2,0,"Bitte geben Sie die Telefonnummer an: ");
+    auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Phone);
     telefonnummer = "0041" + to_string(auswahl);
     cout << "\n" << endl;
-    cout << "Bitte geben sie das Geschlecht des Mitglieds an: \n1) Weiblich \n2) Männlich \n3) Neutral" << endl;
+    cout << Texte::Bitte_1 + Texte:: Geschlecht + Texte::Auswahl_3 << endl;
     cin >> eingabe;
-    auswahl = falscheingabeAbfangen(eingabe,1,3,"Bitte geben sie das Geschlecht des Mitglieds an: \n1) Weiblich \n2) Männlich \n3) Neutral");
+    auswahl = falscheingabeAbfangen(eingabe,1,3,Texte::Bitte_1 + Texte:: Geschlecht + Texte::Auswahl_3);
     switch (auswahl) {
         case 1:
             geschlecht = "W";
@@ -136,9 +137,9 @@ void datenErfassen() {
         break;
     }
     cout << "\n" << endl;
-    cout << "Bitte geben Sie den Status des Mitglieds an: \n1) Aktives Mitglied \n2) Passives Mitglied \n3) Ehrenmitglied \n" << endl;
+    cout << Texte::Bitte_1 + Texte::Status + Texte::Auswahl_2<< endl;
     cin >> eingabe;
-    auswahl = falscheingabeAbfangen(eingabe,1,3,"Bitte geben Sie den Status des Mitglieds an: \n1) Aktives Mitglied \n2) Passives Mitglied \n3) Ehrenmitglied\n");
+    auswahl = falscheingabeAbfangen(eingabe,1,3,Texte::Bitte_1 + Texte::Status + Texte::Auswahl_2);
     switch (auswahl) {
         case 1:
             typ = "A";
@@ -178,18 +179,18 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y,const string &text)
             try {
                 auswahl = stoi(input);
             } catch(const invalid_argument&) {
-                cout << "Ungültige Eingabe\n" << endl;
+                cout << Texte::Eingabe_ungültig << endl;
                 cout << text << endl;
                 cin >> input;
                 continue;
             } catch(const out_of_range&) {
-                cout << "Ungültige Eingabe\n" << endl;
+                cout << Texte::Eingabe_ungültig << endl;
                 cout << text << endl;
                 cin >> input;
                 continue;
             }
             if (auswahl < 1 || auswahl > y) {
-                cout << "Ungültige Eingabe\n" << endl;
+                cout << Texte::Eingabe_ungültig << endl;
                 cout << text << endl;
                 cin >> input;
                 continue;
@@ -204,18 +205,18 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y,const string &text)
             try {
                 auswahl = stoi(input);
             }catch(const invalid_argument&) {
-                cout << "Ungültige Eingabe\n" << endl;
+                cout << Texte::Eingabe_ungültig << endl;
                 cout << text << endl;
                 cin >> input;
                 continue;
             } catch(const out_of_range&) {
-                cout << "Ungültige Eingabe\n" << endl;
+                cout << Texte::Eingabe_ungültig << endl;
                 cout << text << endl;
                 cin >> input;
                 continue;
             }
             if (auswahl < 1) {
-                cout << "Ungültige Eingabe\n" << endl;
+                cout << Texte::Eingabe_ungültig << endl;
                 cout << text << endl;
                 cin >> input;
                 continue;
