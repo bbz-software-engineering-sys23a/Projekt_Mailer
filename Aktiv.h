@@ -16,3 +16,5 @@ public:
     Aktiv(string telefon);
     void Datenout() const override;
 };
+
+#endif
