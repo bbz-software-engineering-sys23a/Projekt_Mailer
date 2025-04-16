@@ -4,19 +4,15 @@
 
 #ifndef PASSIV_H
 #define PASSIV_H
-#include <iostream>
-#include <string>
+
 #include "Mitglieder.h"
+#include <string>
+#include <iostream>
 
 using namespace std;
 
-
-class Passiv final: public Mitglieder {
+class Passiv final : public Mitglieder {
 public:
-    string Geldbetrag;
-
-    Passiv(string telefon, string betrag);
+    Passiv(string telefon);
     void Datenout() const override;
 };
-
-#endif

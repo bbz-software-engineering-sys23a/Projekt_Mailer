@@ -4,17 +4,17 @@
 
 #ifndef EHRENMITGLIED_H
 #define EHRENMITGLIED_H
-#include <iostream>
-#include <string>
+
 #include "Mitglieder.h"
+#include <string>
+#include <iostream>
 
 using namespace std;
 
-class Ehrenmitglied final: public Mitglieder {
+class Ehrenmitglied final : public Mitglieder {
 public:
-    string Geldbetrag;
-
-    Ehrenmitglied(string telefon, string betrag);
+    Ehrenmitglied(string telefon);
     void Datenout() const override;
 };
+
 #endif
