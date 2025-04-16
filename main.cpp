@@ -14,7 +14,7 @@
 
 using namespace std;
 
-
+// Definition Deklaration Aufruf Funktionen: i, j = counter / x, y, z = Integer
 
 void datenErfassen();
 
@@ -22,7 +22,7 @@ void datenAusgeben();
 
 void mailVersenden();
 
-int falscheingabeAbfangen(const string &eingabe,int x, int i, const string &text);
+int falscheingabeAbfangen(const string &eingabe,int x, int y, const string &text);
 
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
@@ -44,16 +44,21 @@ int main()
     string geschlecht;
     string typ;
 
+    string eingabe;
+    int auswahl;
+
 
 
 
     while (x == true) {
-        string eingabe;
-        int auswahl;
+        //string eingabe;
+        //int auswahl;
         cout << "Guten Tag. Was möchten sie tun? \n 1) Daten eingeben \n 2) Daten anzeigen \n 3) Ein Mail versenden \n 4) Das Programm beenden\n" << endl;
         cin >> eingabe;
 
-        try {
+        auswahl = falscheingabeAbfangen(eingabe,1,4,"Was möchten sie tun? \n 1) Daten eingeben \n 2) Daten anzeigen \n 3) Ein Mail versenden \n 4) Das Programm beenden\n");
+
+        /*try {
             auswahl = stoi(eingabe);
         } catch(const invalid_argument&) {
             cout << "Ungültige Eingabe\n" << endl;
@@ -61,7 +66,7 @@ int main()
         } catch(const out_of_range&) {
             cout << "Ungültige Eingabe\n" << endl;
             continue;
-        }
+        }*/
 
         switch (auswahl) {
             case 1:
@@ -79,9 +84,9 @@ int main()
             case 4:
                 x = false;
             break;
-            default:
+            /*default:
                 cout << "Ungültige Eingabe\n" << endl;
-            break;
+            break;*/
         }
     }
     return 0;
@@ -185,7 +190,7 @@ void mailVersenden() {
 }
 
 
-int falscheingabeAbfangen(const string &eingabe,int x, int i,const string &text) {
+int falscheingabeAbfangen(const string &eingabe,int x, int y,const string &text) {
     int auswahl;
     string input = eingabe;
     if (x == 1) {
@@ -203,7 +208,7 @@ int falscheingabeAbfangen(const string &eingabe,int x, int i,const string &text)
                 cin >> input;
                 continue;
             }
-            if (auswahl < 1 || auswahl > i) {
+            if (auswahl < 1 || auswahl > y) {
                 cout << "Ungültige Eingabe\n" << endl;
                 cout << text << endl;
                 cin >> input;
@@ -276,4 +281,3 @@ bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string
     return true;
 }
 
-//cout << "Blök" << endl;
