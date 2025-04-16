@@ -9,4 +9,5 @@ add_executable(Projekt_Mailer
         Aktiv.cpp
         Passiv.cpp
         Ehrenmitglied.cpp
+        Texte.h
 )

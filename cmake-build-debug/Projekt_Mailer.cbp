@@ -106,6 +106,9 @@
 		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Passiv.h">
 			<Option target="Projekt_Mailer"/>
 		</Unit>
+		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Texte.h">
+			<Option target="Projekt_Mailer"/>
+		</Unit>
 		<Unit filename="C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/main.cpp">
 			<Option target="Projekt_Mailer"/>
 		</Unit>

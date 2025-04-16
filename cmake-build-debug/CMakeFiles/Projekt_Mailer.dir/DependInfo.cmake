@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/steph/OneDrive - Berufsbildungszentrum Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Aktiv.cpp" "CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj.d"
-  "C:/Users/steph/OneDrive - Berufsbildungszentrum Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Ehrenmitglied.cpp" "CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj.d"
-  "C:/Users/steph/OneDrive - Berufsbildungszentrum Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Mitglieder.cpp" "CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj.d"
-  "C:/Users/steph/OneDrive - Berufsbildungszentrum Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Passiv.cpp" "CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj.d"
-  "C:/Users/steph/OneDrive - Berufsbildungszentrum Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/main.cpp" "CMakeFiles/Projekt_Mailer.dir/main.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/main.cpp.obj.d"
+  "C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Aktiv.cpp" "CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.obj.d"
+  "C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Ehrenmitglied.cpp" "CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/Ehrenmitglied.cpp.obj.d"
+  "C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Mitglieder.cpp" "CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj.d"
+  "C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/Passiv.cpp" "CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj.d"
+  "C:/Users/kai0/OneDrive/Dokumente/GitHub/Projekt_Mailer/main.cpp" "CMakeFiles/Projekt_Mailer.dir/main.cpp.obj" "gcc" "CMakeFiles/Projekt_Mailer.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -4,16 +4,17 @@
 
 #ifndef AKTIV_H
 #define AKTIV_H
-#include <iostream>
-#include <string>
+
 #include "Mitglieder.h"
+#include <string>
+#include <iostream>
 
 using namespace std;
-class Aktiv final: public Mitglieder {
+
+class Aktiv final : public Mitglieder {
 public:
-    string Geldbetrag;
-    Aktiv(string telefon, string betrag);
+    Aktiv(string telefon);
     void Datenout() const override;
 };
-
 #endif
+
