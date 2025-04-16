@@ -27,7 +27,8 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y, const string &text
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
 //K
-Mitglieder* mitgliedZuweisen(const string& telefonnummer, const string& typ,string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
+Mitglieder* mitgliedZuweisen(const string& telefonnummer, const string& typ);
+//,string plz,string wohnort,string email,string& telefonnummer,string geschlecht,string typ);
 
 string filtern_csv();
 
@@ -97,14 +98,7 @@ int main()
             break;
             }
     }
-   if (!schreiben_csv( mitgliedernummer,nachname,vorname,strasse, hausnummer,
-                        plz, wohnort, email, telefonnummer, geschlecht,typ))
-        {
-        cerr << "Ein Fehler ist aufgetreten." << endl;
-        return 1;
-        }
 
-    string result =   filtern_csv();
 /*
 cout << "Der String ist :"<<result <<endl;
 */
@@ -211,6 +205,14 @@ void datenErfassen() {
 
 void datenAusgeben() {
     cout << "Daten Ausgeben\n" << endl;
+    if (!schreiben_csv( mitgliedernummer,nachname,vorname,strasse, hausnummer,
+                       plz, wohnort, email, telefonnummer, geschlecht,typ))
+    {
+        cerr << "Ein Fehler ist aufgetreten." << endl;
+        return;
+    }
+
+    string result =   filtern_csv();
 }
 
 
@@ -330,7 +332,7 @@ Mitglieder* mitgliedZuweisen(const string& telefonnummer, const string& typ) {
     }
 }
 
-}//END schreiben_csv()
+//END schreiben_csv()
 
 //Filtern mit auswahl und erstellen zusammengesetzten string
 string filtern_csv()
