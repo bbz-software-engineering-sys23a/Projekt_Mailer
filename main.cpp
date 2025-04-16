@@ -213,6 +213,7 @@ void datenAusgeben() {
     }
 
     string result =   filtern_csv();
+    cout << result << endl;
 }
 
 
