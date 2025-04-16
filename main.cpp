@@ -129,7 +129,7 @@ void datenErfassen() {
 
     string mitgliedernummer;
     */
-    int nummer;
+    //int nummer;
 
 
     string eingabe;
@@ -197,11 +197,20 @@ void datenErfassen() {
     }
     cout << "\n" << endl;
 
-    schreiben_csv(mitgliedernummer, nachname, vorname, strasse, hausnummer,
-        plz,wohnort,email,telefonnummer,geschlecht,typ);
-    //K
-        Mitglieder* mitglied = mitgliedZuweisen(telefonnummer, typ);
-    if (mitglied) {
+
+    Mitglieder* mitglied = mitgliedZuweisen(telefonnummer, typ);
+    if (mitglied)
+    {
+        mitglied->Nachname = nachname;
+        mitglied->Vorname  = vorname;
+        mitglied->Strasse  = strasse;
+        mitglied->Hausnummer = hausnummer;
+        mitglied->Plz = plz;
+        mitglied->Wohnort = wohnort;
+        mitglied->email = email;
+        mitglied->Geschlecht = geschlecht;
+        // Schreibe den Datensatz in die CSV-Datei
+        mitglied->schreiben_csv();
         mitglied->Datenout();
         delete mitglied;
     } else {
@@ -213,15 +222,8 @@ void datenErfassen() {
 
 void datenAusgeben() {
     cout << "Daten Ausgeben\n" << endl;
-    if (!schreiben_csv( mitgliedernummer,nachname,vorname,strasse, hausnummer,
-                       plz, wohnort, email, telefonnummer, geschlecht,typ))
-    {
-        cerr << "Ein Fehler ist aufgetreten." << endl;
-        return;
-    }
-
-    string result =   filtern_csv();
-    cout << result << endl;
+    string result = Mitglieder::filtern_csv();
+    cout << result << "\n" << endl;
 }
 
 
