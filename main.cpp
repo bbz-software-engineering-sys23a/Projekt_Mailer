@@ -123,6 +123,8 @@ void datenErfassen() {
 
     string mitgliedernummer;
     */
+    int nummer;
+
 
     string eingabe;
     int auswahl;
