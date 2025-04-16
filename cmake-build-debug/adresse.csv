@@ -1,0 +1,10 @@
+Mitglied-Nr.;Name;Vorname;Strasse;Hausnummer;PLZ;Wohnort;E-Mail;Tel.Nr.;Geschlecht;Typ
+1;Meier;Peter;Gasse;11;8201;Schaffhausen;pm@ffch1;111111;m;a
+2;Mueller;Hans;Gasse;12;8202;Schaffhause;pm@ffch2;222222;m;a
+3;Manser;Walter;Gasse;13;8303;Schaffhaus;pm@ffch3;333333;m;p
+4;Schmidt;Gertrud;Gasse;14;8204;Schaffhau;pm@ffch4;444444;m;p
+5;Franzen;Sandra;Gasse;15;8205;Schaffha;pm@ffch5;555555;w;e
+6;Bieri;Monika;Gasse;16;8206;Schaffh;pm@ffch6;666666;w;e
+7;Brand;Sepp;Gasse;17;8207;Schaf;pm@ffch7;777777;m;a
+8;Meier;Peter;Gasse;18;8208;Schaffhausen;pm@ffch8;888888;m;p
+9;Sager;Peter;Gasse;20;8209;Sch;pm@ffch9;999999;m;e
