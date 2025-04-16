@@ -151,6 +151,7 @@ void datenErfassen() {
     }
     cout << "\n" << endl;
 
+
     schreiben_csv(mitgliedernummer, nachname, vorname, strasse, hausnummer,
         plz,wohnort,email,telefonnummer,geschlecht,typ);
 }
