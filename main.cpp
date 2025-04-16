@@ -5,6 +5,7 @@
 #include <windows.h>
 #include <vector>
 #include <filesystem>
+#include <list>
 
 #include "Mitglieder.h"
 #include "Ehrenmitglied.h"
