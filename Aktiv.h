@@ -6,6 +6,7 @@
 #define AKTIV_H
 
 #include "Mitglieder.h"
+#include "Texte.h"
 #include <string>
 #include <iostream>
 
@@ -15,6 +16,11 @@ class Aktiv final : public Mitglieder {
 public:
     Aktiv(string telefon);
     void Datenout() const override;
+
+    static string getDefaultBeitrag();
+    static void setDefaultBeitrag(const string &betrag);
+private:
+    static string defaultBeitrag;
 };
 
 #endif

@@ -14,6 +14,7 @@ namespace Texte {
 
     // Fragen
     const string Was = "Was möchten sie tun? \n";
+    const string Was_2 = "Welche Geldbeträge möchten Sie Anpassen?\n";
 
     // Auswahlmöglichkeiten
     const string Auswahl_1 = "\n 1) Daten erfassen \n 2) Daten anzeigen \n 3) Ein Mail versenden \n 4) Das Programm beenden\n";

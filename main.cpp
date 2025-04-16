@@ -24,13 +24,16 @@ void mailVersenden();
 
 int falscheingabeAbfangen(const string &eingabe,int x, int y, const string &text);
 
-bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
-    string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
+int betragAnpassen();
+
+/*bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
+    string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);*/
+
 //K
 Mitglieder* mitgliedZuweisen(const string& telefonnummer, const string& typ);
 //,string plz,string wohnort,string email,string& telefonnummer,string geschlecht,string typ);
 
-string filtern_csv();
+//string filtern_csv();
 
 /*
 string mitgliedernummer_;
@@ -77,7 +80,7 @@ int main()
         cout << Texte::Was + Texte::Auswahl_1 << endl;
         cin >> eingabe;
 
-        auswahl = falscheingabeAbfangen(eingabe,1,4,Texte::Was + Texte::Auswahl_1);
+        auswahl = falscheingabeAbfangen(eingabe,1,5,Texte::Was + Texte::Auswahl_1);
 
 
         switch (auswahl) {
@@ -95,6 +98,9 @@ int main()
             break;
             case 4:
                 x = false;
+            break;
+            case 5:
+                betragAnpassen();
             break;
             }
     }
@@ -280,6 +286,16 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y,const string &text)
         return auswahl;
     }
 }
+
+int betragAnpassen() {
+    string beitragAnpassen;
+    string eingabe;
+    int auswahl;
+    cout << Texte::Was_2 + Texte::Auswahl_2 << endl;
+    cin >> eingabe;
+    auswahl = falscheingabeAbfangen(eingabe,1,3,Texte::Was_2 + Texte::Auswahl_2);
+}
+
 
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ)

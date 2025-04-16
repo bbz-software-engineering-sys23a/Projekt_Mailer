@@ -4,8 +4,14 @@
 #ifndef MITGLIEDER_H
 #define MITGLIEDER_H
 
+#include "Texte.h"
 #include <string>
 #include <iostream>
+#include <vector>
+#include <fstream>
+#include <filesystem>
+#include <sstream>
+#include <limits>
 
 using namespace std;
 
@@ -17,7 +23,6 @@ protected:
     string Geldbetrag;
 
 public:
-
     string Nachname;
     string Vorname;
     string Geschlecht;
@@ -29,17 +34,18 @@ public:
 
     explicit Mitglieder(string telefon);
 
-    
     [[nodiscard]] string getMitgliedernummer() const;
     [[nodiscard]] string getTelnummer() const;
     [[nodiscard]] string getGeldbetrag() const;
 
-
     void setGeldbetrag(const string& betrag);
-
 
     virtual void Datenout() const;
     virtual ~Mitglieder() = default;
+
+    // Neue Methoden: Schreiben eines Datensatzes in die CSV und Filtern der CSV
+    bool schreiben_csv() const;
+    static string filtern_csv();
 };
 
 #endif

@@ -1,11 +1,15 @@
 //
 // Created by kai0 on 14/04/2025.
 //
+
+#include "Texte.h"
 #include "Ehrenmitglied.h"
+
+string Ehrenmitglied::defaultBeitrag = "10 Fr.";
 
 Ehrenmitglied::Ehrenmitglied(string telefon)
     : Mitglieder(telefon) {
-    Geldbetrag = "10 Fr.";
+    Geldbetrag = defaultBeitrag;
 }
 
 void Ehrenmitglied::Datenout() const {
@@ -15,4 +19,12 @@ void Ehrenmitglied::Datenout() const {
          << ", Betrag: " << getGeldbetrag()
          << ", Mitgliedernr. " << getMitgliedernummer()
          << endl;
+}
+
+string Ehrenmitglied::getDefaultBeitrag() {
+    return defaultBeitrag;
+}
+
+void Ehrenmitglied::setDefaultBeitrag(const string &betrag) {
+    defaultBeitrag = betrag;
 }
