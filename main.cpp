@@ -28,7 +28,8 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y, const string &text
 
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
-
+//K
+Mitglieder* mitgliedZuweisen(const string& telefonnummer, const string& typ);
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
@@ -154,6 +155,14 @@ void datenErfassen() {
 
     schreiben_csv(mitgliedernummer, nachname, vorname, strasse, hausnummer,
         plz,wohnort,email,telefonnummer,geschlecht,typ);
+    //K
+        Mitglieder* mitglied = mitgliedZuweisen(telefonnummer, typ);
+    if (mitglied) {
+        mitglied->Datenout();
+        delete mitglied;
+    } else {
+        cout << "Ungültiger Mitgliedstyp – keine Ausgabe möglich." << endl;
+    }
 }
 
 
@@ -265,4 +274,15 @@ bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string
     std::cout << "Adresszeile erfolgreich hinzugefuegt!" << std::endl;
     return true;
 }
-
+//K
+Mitglieder* mitgliedZuweisen(const string& telefonnummer, const string& typ) {
+    if (typ == "A") {
+        return new Aktiv(telefonnummer);
+    } else if (typ == "P") {
+        return new Passiv(telefonnummer);
+    } else if (typ == "E") {
+        return new Ehrenmitglied(telefonnummer);
+    } else {
+        return nullptr;
+    }
+}
