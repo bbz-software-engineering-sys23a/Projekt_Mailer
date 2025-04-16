@@ -2,9 +2,7 @@
 // Created by kai0 on 14/04/2025.
 //
 #include "Passiv.h"
-
 #include "Texte.h"
-#include "Passiv.h"
 
 string Passiv::defaultBeitrag = "30 Fr.";
 

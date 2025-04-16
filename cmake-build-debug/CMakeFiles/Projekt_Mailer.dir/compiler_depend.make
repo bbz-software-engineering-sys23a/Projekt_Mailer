@@ -585,7 +585,10 @@ CMakeFiles/Projekt_Mailer.dir/Mitglieder.cpp.obj: C:/Users/steph/OneDrive\ -\ Be
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Aktiv.h \
+  C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Ehrenmitglied.h \
   C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Mitglieder.h \
+  C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Passiv.h \
   C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Texte.h
 
 CMakeFiles/Projekt_Mailer.dir/Passiv.cpp.obj: C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Passiv.cpp \

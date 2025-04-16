@@ -3,6 +3,9 @@
 //
 #include "Texte.h"
 #include "Mitglieder.h"
+#include "Aktiv.h"
+#include "Passiv.h"
+#include "Ehrenmitglied.h"
 
 int Mitglieder::MitgliedernummerCounter = 1;
 
@@ -37,6 +40,58 @@ void Mitglieder::Datenout() const {
     cout << "Geldbetrag: " << Geldbetrag << endl;
 }
 
+bool Mitglieder::schreiben_csv() const {
+    const string dateiname = "adresse.csv";
+    const vector<string> spalten = {
+        "Mitglied-Nr.", "Name", "Vorname", "Strasse", "Hausnummer",
+        "PLZ", "Wohnort", "E-Mail", "Tel.Nr.", "Geschlecht", "Typ", "Mitgliederbeitrag"
+    };
+
+    bool dateiExistiert = filesystem::exists(dateiname);
+    ofstream datei(dateiname, ios::app);
+    if (!datei)
+    {
+        cerr << "Fehler beim Oeffnen der Datei!" << endl;
+        return false;
+    }
+    if (!dateiExistiert)
+    {
+        for (size_t i = 0; i < spalten.size(); ++i)
+        {
+            datei << spalten[i];
+            if (i < spalten.size() - 1)
+                datei << ";";
+        }
+        datei << '\n';
+        cout << "Datei erstellt und Spaltenueberschriften eingefuegt." << endl;
+    }
+
+    // Bestimme den Typ anhand des dynamischen Typs
+    string typLetter;
+    if (dynamic_cast<const Aktiv*>(this))
+        typLetter = "A";
+    else if (dynamic_cast<const Passiv*>(this))
+        typLetter = "P";
+    else if (dynamic_cast<const Ehrenmitglied*>(this))
+        typLetter = "E";
+    else
+        typLetter = "";
+
+    datei << Mitgliedernummer << ";"
+          << Nachname << ";"
+          << Vorname << ";"
+          << Strasse << ";"
+          << Hausnummer << ";"
+          << Plz << ";"
+          << Wohnort << ";"
+          << email << ";"
+          << Telnummer << ";"
+          << Geschlecht << ";"
+          << typLetter << ";"
+          << Geldbetrag << "\n";
+    cout << "Adresszeile erfolgreich hinzugefuegt!" << endl;
+    return true;
+}
 
 string Mitglieder::filtern_csv() {
     string dateiname = "adresse.csv";
@@ -117,7 +172,7 @@ string Mitglieder::filtern_csv() {
     }
     if (!gefunden)
     {
-        cout << "Keine passenden Eintraege gefunden.\n";
+        cout << "Keine passenden Einträge gefunden.\n";
         return "";
     }
     // Falls genau ein Treffer besteht, liefern wir diesen zurück.
