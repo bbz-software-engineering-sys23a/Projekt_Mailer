@@ -166,6 +166,17 @@ void datenAusgeben() {
 
 void mailVersenden() {
     cout << "Mail Versenden\n" << endl;
+
+    enum RessultCode {
+        Okay = 250,
+        Data = 354,
+        Ready = 220,
+        Goodbye = 221,
+        Accepted = 334,
+        AUTH_successful = 235
+      };
+
+
 }
 
 
