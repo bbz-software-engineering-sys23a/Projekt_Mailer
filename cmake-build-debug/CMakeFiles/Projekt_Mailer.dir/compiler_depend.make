@@ -1058,7 +1058,8 @@ CMakeFiles/Projekt_Mailer.dir/main.cpp.obj: C:/Users/steph/OneDrive\ -\ Berufsbi
   C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Aktiv.h \
   C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Ehrenmitglied.h \
   C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Mitglieder.h \
-  C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Passiv.h
+  C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Passiv.h \
+  C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Texte.h
 
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/cetintrin.h:
@@ -1462,6 +1463,8 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include
 C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/ctype.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/errno.h:
+
+C:/Users/steph/OneDrive\ -\ Berufsbildungszentrum\ Schaffhausen/Informatik/CLionProjects/Projekt_2025/Projekt_Mailer/Texte.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512bf16intrin.h:
 
