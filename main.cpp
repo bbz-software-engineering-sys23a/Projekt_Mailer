@@ -61,7 +61,7 @@ string telefonnummer;
 string geschlecht;
 string typ;
 
-string mitgliedernummer;
+//string mitgliedernummer;
 
 int main()
 {
@@ -103,11 +103,10 @@ int main()
                 betragAnpassen();
             break;
             }
+        default:
+            break;
+        }
     }
-
-/*
-cout << "Der String ist :"<<result <<endl;
-*/
     return 0;
 }
 

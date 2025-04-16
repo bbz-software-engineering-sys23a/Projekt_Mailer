@@ -37,65 +37,13 @@ void Mitglieder::Datenout() const {
     cout << "Geldbetrag: " << Geldbetrag << endl;
 }
 
-bool Mitglieder::schreiben_csv() const {
-    const string dateiname = "adresse.csv";
-    const vector<string> spalten = {
-        "Mitglied-Nr.", "Name", "Vorname", "Strasse", "Hausnummer",
-        "PLZ", "Wohnort", "E-Mail", "Tel.Nr.", "Geschlecht", "Typ", "Mitgliederbeitrag"
-    };
-
-    bool dateiExistiert = filesystem::exists(dateiname);
-    ofstream datei(dateiname, ios::app);
-    if (!datei)
-    {
-        cerr << "Fehler beim Oeffnen der Datei!" << endl;
-        return false;
-    }
-    if (!dateiExistiert)
-    {
-        for (size_t i = 0; i < spalten.size(); ++i)
-        {
-            datei << spalten[i];
-            if (i < spalten.size() - 1)
-                datei << ";";
-        }
-        datei << '\n';
-        cout << "Datei erstellt und Spaltenueberschriften eingefuegt." << endl;
-    }
-
-    // Bestimme den Typ anhand des dynamischen Typs
-    string typLetter;
-    if (dynamic_cast<const class Aktiv*>(this))
-        typLetter = "A";
-    else if (dynamic_cast<const class Passiv*>(this))
-        typLetter = "P";
-    else if (dynamic_cast<const class Ehrenmitglied*>(this))
-        typLetter = "E";
-    else
-        typLetter = "";
-
-    datei << Mitgliedernummer << ";"
-          << Nachname << ";"
-          << Vorname << ";"
-          << Strasse << ";"
-          << Hausnummer << ";"
-          << Plz << ";"
-          << Wohnort << ";"
-          << email << ";"
-          << Telnummer << ";"
-          << Geschlecht << ";"
-          << typLetter << ";"
-          << Geldbetrag << "\n";
-    cout << "Adresszeile erfolgreich hinzugefuegt!" << endl;
-    return true;
-}
 
 string Mitglieder::filtern_csv() {
     string dateiname = "adresse.csv";
     ifstream datei(dateiname);
     if (!datei)
     {
-        cerr << "Datei konnte nicht geoeffnet werden.\n";
+        cerr << "Datei konnte nicht geöffnet werden.\n";
         return "";
     }
 
@@ -104,7 +52,7 @@ string Mitglieder::filtern_csv() {
         "PLZ", "Wohnort", "E-Mail", "Tel.Nr.", "Geschlecht", "Typ", "Mitgliederbeitrag"
     };
 
-    cout << "\nNach welcher Spalte moechten Sie filtern?\n";
+    cout << "\nNach welcher Spalte möchten Sie filtern?\n";
     // Für die Filterung nutzen wir die ersten 11 Spalten (letzte Spalte ist Mitgliederbeitrag)
     for (size_t i = 0; i < spalten.size() - 1; ++i)
     {
@@ -119,13 +67,13 @@ string Mitglieder::filtern_csv() {
         {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cerr <<"Ungueltige Eingabe. Bitte eine ganze Zahl eingeben.\n";
+            cerr <<"Ungültige Eingabe. Bitte eine ganze Zahl eingeben.\n";
             continue;
         }
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         if (spaltenIndex < 0 || spaltenIndex >= static_cast<int>(spalten.size()) - 1)
         {
-            cerr << "Ungueltiger Spaltenindex. Bitte einen Wert zwischen 0 und " << spalten.size() - 2 << " eingeben.\n";
+            cerr << "Ungültiger Spaltenindex. Bitte einen Wert zwischen 0 und " << spalten.size() - 2 << " eingeben.\n";
             continue;
         }
         break;
@@ -139,7 +87,7 @@ string Mitglieder::filtern_csv() {
     bool gefunden = false;
     vector<vector<string>> treffer;
 
-    cout << "\n--- Gefundene Eintraege ---\n";
+    cout << "\n--- Gefundene Einträge ---\n";
     while (getline(datei, zeile))
     {
         if (ersteZeile)
