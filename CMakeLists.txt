@@ -9,4 +9,6 @@ add_executable(Projekt_Mailer
         Aktiv.cpp
         Passiv.cpp
         Ehrenmitglied.cpp
+        cmake-build-debug/Ausgabetexte.cpp
+        cmake-build-debug/Ausgabetexte.h
 )

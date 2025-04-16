@@ -10,6 +10,7 @@
 #include "Ehrenmitglied.h"
 #include "Aktiv.h"
 #include "Passiv.h"
+#include "Ausgabetexte.h"
 
 
 using namespace std;
@@ -84,7 +85,7 @@ void datenErfassen() {
     string geschlecht;
     string typ;
 
-    string mitgliedernummer;
+    //string mitgliedernummer;
 
     string eingabe;
     int auswahl;

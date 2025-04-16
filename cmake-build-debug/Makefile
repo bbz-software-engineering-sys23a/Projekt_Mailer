@@ -152,6 +152,30 @@ Aktiv.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Aktiv.cpp.s
 .PHONY : Aktiv.cpp.s
 
+Ausgabetexte.obj: Ausgabetexte.cpp.obj
+.PHONY : Ausgabetexte.obj
+
+# target to build an object file
+Ausgabetexte.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Ausgabetexte.cpp.obj
+.PHONY : Ausgabetexte.cpp.obj
+
+Ausgabetexte.i: Ausgabetexte.cpp.i
+.PHONY : Ausgabetexte.i
+
+# target to preprocess a source file
+Ausgabetexte.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Ausgabetexte.cpp.i
+.PHONY : Ausgabetexte.cpp.i
+
+Ausgabetexte.s: Ausgabetexte.cpp.s
+.PHONY : Ausgabetexte.s
+
+# target to generate assembly for a file
+Ausgabetexte.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Mailer.dir\build.make CMakeFiles/Projekt_Mailer.dir/Ausgabetexte.cpp.s
+.PHONY : Ausgabetexte.cpp.s
+
 Ehrenmitglied.obj: Ehrenmitglied.cpp.obj
 .PHONY : Ehrenmitglied.obj
 
@@ -260,6 +284,9 @@ help:
 	@echo ... Aktiv.obj
 	@echo ... Aktiv.i
 	@echo ... Aktiv.s
+	@echo ... Ausgabetexte.obj
+	@echo ... Ausgabetexte.i
+	@echo ... Ausgabetexte.s
 	@echo ... Ehrenmitglied.obj
 	@echo ... Ehrenmitglied.i
 	@echo ... Ehrenmitglied.s
