@@ -24,7 +24,7 @@ void mailVersenden();
 
 int falscheingabeAbfangen(const string &eingabe,int x, int y, const string &text);
 
-int betragAnpassen();
+void betragAnpassen();
 
 /*bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);*/
