@@ -11,11 +11,11 @@
 #include "Aktiv.h"
 #include "Passiv.h"
 
-//sddsd
+
 using namespace std;
 
 // Definition Deklaration Aufruf Funktionen: i, j = counter / x, y, z = Integer
-
+// Funktionen deklarieren
 void datenErfassen();
 
 void datenAusgeben();
@@ -27,50 +27,30 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y, const string &text
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
 
+
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
 
     bool x = true;
     //const int  mitgliedernummer;
-    string nachname;
-    string vorname;
-    string strasse;
-    string hausnummer;
-    string plz;
-    string wohnort;
-    string email;
-    string telefonnummer;
-    string geschlecht;
-    string typ;
 
     string eingabe;
     int auswahl;
 
-
-
-
+    cout << "Guten Tag\n" << endl;
+    // Schleife mit Abbruchbedingung Programm
     while (x == true) {
-        //string eingabe;
-        //int auswahl;
-        cout << "Guten Tag. Was möchten sie tun? \n 1) Daten eingeben \n 2) Daten anzeigen \n 3) Ein Mail versenden \n 4) Das Programm beenden\n" << endl;
+
+        cout << "Was möchten sie tun? \n 1) Daten erfassen \n 2) Daten anzeigen \n 3) Ein Mail versenden \n 4) Das Programm beenden\n" << endl;
         cin >> eingabe;
 
-        auswahl = falscheingabeAbfangen(eingabe,1,4,"Was möchten sie tun? \n 1) Daten eingeben \n 2) Daten anzeigen \n 3) Ein Mail versenden \n 4) Das Programm beenden\n");
+        auswahl = falscheingabeAbfangen(eingabe,1,4,"Was möchten sie tun? \n 1) Daten erfassen \n 2) Daten anzeigen \n 3) Ein Mail versenden \n 4) Das Programm beenden\n");
 
-        /*try {
-            auswahl = stoi(eingabe);
-        } catch(const invalid_argument&) {
-            cout << "Ungültige Eingabe\n" << endl;
-            continue;
-        } catch(const out_of_range&) {
-            cout << "Ungültige Eingabe\n" << endl;
-            continue;
-        }*/
 
         switch (auswahl) {
             case 1:
-                cout << "Sie haben Daten eingeben gewählt\n" << endl;
+                cout << "Sie haben Daten erfassen gewählt\n" << endl;
             datenErfassen();
             break;
             case 2:
@@ -84,10 +64,7 @@ int main()
             case 4:
                 x = false;
             break;
-            /*default:
-                cout << "Ungültige Eingabe\n" << endl;
-            break;*/
-        }
+            }
     }
     return 0;
 }
@@ -108,17 +85,18 @@ void datenErfassen() {
     string typ;
 
     string mitgliedernummer;
+
     string eingabe;
     int auswahl;
 
-    cout << "Daten Erfassen\n" << endl;
+    //cout << "Daten Erfassen\n" << endl;
     cout << "Bitte geben Sie den Nachnamen an: " << endl;
     cin >> nachname;
     cout << "\n" << endl;
     cout << "Bitte geben Sie den vorname an: " << endl;
     cin >> vorname;
     cout << "\n" << endl;
-    cout << "Bitte geben Sie die strasse an: " << endl;
+    cout << "Bitte geben Sie die Strasse an: " << endl;
     cin >> strasse;
     cout << "\n" << endl;
     cout << "Bitte geben Sie die Hausnummer an: " << endl;
@@ -142,9 +120,9 @@ void datenErfassen() {
     auswahl = falscheingabeAbfangen(eingabe,2,0,"Bitte geben Sie die Telefonnummer an: ");
     telefonnummer = "0041" + to_string(auswahl);
     cout << "\n" << endl;
-    cout << "Bitte geben sie das Geschlecht des Mitglieds an:\n1) Weiblich\n2) Männlich\n3) Neutral" << endl;
+    cout << "Bitte geben sie das Geschlecht des Mitglieds an: \n1) Weiblich \n2) Männlich \n3) Neutral" << endl;
     cin >> eingabe;
-    auswahl = falscheingabeAbfangen(eingabe,1,3,"Bitte geben sie das Geschlecht des Mitglieds an:\n1) Weiblich\n2) Männlich\n3) Neutral");
+    auswahl = falscheingabeAbfangen(eingabe,1,3,"Bitte geben sie das Geschlecht des Mitglieds an: \n1) Weiblich \n2) Männlich \n3) Neutral");
     switch (auswahl) {
         case 1:
             geschlecht = "W";
@@ -157,9 +135,9 @@ void datenErfassen() {
         break;
     }
     cout << "\n" << endl;
-    cout << "Bitte geben Sie den Status des Mitglieds an:\n1) Aktives Mitglied\n2) Passives Mitglied\n3) Ehrenmitglied\n" << endl;
+    cout << "Bitte geben Sie den Status des Mitglieds an: \n1) Aktives Mitglied \n2) Passives Mitglied \n3) Ehrenmitglied \n" << endl;
     cin >> eingabe;
-    auswahl = falscheingabeAbfangen(eingabe,1,3,"Bitte geben Sie den Status des Mitglieds an:\n1) Aktives Mitglied\n2) Passives Mitglied\n3) Ehrenmitglied\n");
+    auswahl = falscheingabeAbfangen(eingabe,1,3,"Bitte geben Sie den Status des Mitglieds an: \n1) Aktives Mitglied \n2) Passives Mitglied \n3) Ehrenmitglied\n");
     switch (auswahl) {
         case 1:
             typ = "A";
@@ -229,6 +207,12 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y,const string &text)
                 cin >> input;
                 continue;
             } catch(const out_of_range&) {
+                cout << "Ungültige Eingabe\n" << endl;
+                cout << text << endl;
+                cin >> input;
+                continue;
+            }
+            if (auswahl < 1) {
                 cout << "Ungültige Eingabe\n" << endl;
                 cout << text << endl;
                 cin >> input;
