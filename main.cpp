@@ -27,8 +27,7 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y, const string &text
 bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
     string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
 //K
-Mitglieder* mitgliedZuweisen(const string& telefonnummer, const string& typ);
-                    string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
+Mitglieder* mitgliedZuweisen(const string& telefonnummer, const string& typ,string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);
 
 string filtern_csv();
 
@@ -46,6 +45,19 @@ string telefonnummer_;
 string hausnummer_;
 string zusammenhang;
 */
+
+string nachname;
+string vorname;
+string strasse;
+string hausnummer;
+string plz;
+string wohnort;
+string email;
+string telefonnummer;
+string geschlecht;
+string typ;
+
+string mitgliedernummer;
 
 int main()
 {
@@ -88,7 +100,7 @@ int main()
    if (!schreiben_csv( mitgliedernummer,nachname,vorname,strasse, hausnummer,
                         plz, wohnort, email, telefonnummer, geschlecht,typ))
         {
-        cerr << "Ein Fehler ist aufgetreten." << std::endl;
+        cerr << "Ein Fehler ist aufgetreten." << endl;
         return 1;
         }
 
@@ -103,6 +115,7 @@ cout << "Der String ist :"<<result <<endl;
 
 void datenErfassen() {
 
+    /*
     string nachname;
     string vorname;
     string strasse;
@@ -115,6 +128,7 @@ void datenErfassen() {
     string typ;
 
     string mitgliedernummer;
+    */
 
     string eingabe;
     int auswahl;
