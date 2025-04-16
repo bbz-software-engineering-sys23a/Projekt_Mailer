@@ -11,7 +11,7 @@
 #include "Aktiv.h"
 #include "Passiv.h"
 
-
+//sddsd
 using namespace std;
 
 // Definition Deklaration Aufruf Funktionen: i, j = counter / x, y, z = Integer
