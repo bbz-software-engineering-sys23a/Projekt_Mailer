@@ -10,7 +10,7 @@
 int Mitglieder::MitgliedernummerCounter = 1;
 
 Mitglieder::Mitglieder(string telefon) : Telnummer(telefon) {
-    Mitgliedernummer = "Mitglied " + to_string(MitgliedernummerCounter++);
+    Mitgliedernummer = to_string(MitgliedernummerCounter++);
     Geldbetrag = "0 Fr.";
 }
 
