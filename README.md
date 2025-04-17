@@ -29,8 +29,8 @@ Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadre
 | Daten in CSV-Datei speichern                                               | X    | -      |
 | Daten filtern und als String mit Trennzeichen";"ausgeben                   | X    | -      |
 | Falscheingaben abfangen                                                    | X    | -      |
-| Mitglieder-Art zuweisen und Mitlieder-Beitrag definieren                   | X    | -      |
-| Anhand des Datensatzes ein E-Mail generieren                               |      | X      |
+| Mitglieder-Art zuweisen und Mitlieder-Beitrag definieren                   | -    | X      |
+| Anhand des Datensatzes ein E-Mail generieren                               | -    | X      |
 | Anhand des ausgegebenen Adressen-Strings eine druckbare Adresse generieren | -    | X      |
                                                              
 
@@ -51,16 +51,15 @@ Ziel:
 Auslöser: 
 - Ein neues Vereinsmitglied soll aufgenommen werden.
 - Ein vorhandenes Mitglied kann gefiltert werden.
-- (nur Erwieiterung) An ein Mitglied soll eine E-mail versendet werden
+- (nur Erweiterung) An ein Mitglied soll eine E-mail versendet werden.
 
 Vorbedingungen:
 Die Software ist gestartet.
 
 Ablauf einer Erfassung:
 1. Der Benutzer wählt in der gegebenen Auswahl "Daten erfassen"
-1. Der Benutzer des Programms gibt die persönlichen Daten der Mitglieder ein (Name, Adresse, Geburtsdatum etc.).
-2. Die Mitgliederart wird ausgewählt (z. B. aktiv, passiv, Ehrenmitglied).
-3. Die Software weist automatisch den entsprechenden Mitgliederbeitrag zu.
+2. Der Benutzer des Programms gibt die persönlichen Daten der Mitglieder ein (Name, Adresse, Geburtsdatum etc.).
+3. Die Mitgliederart wird ausgewählt (z. B. aktiv, passiv, Ehrenmitglied).
 4. Nach Abschluss der Eingabe klickt der User auf „Speichern“.
 5. Bei korrekter Eingabe wird der Datensatz in der CSV-Datei gespeichert.
 6. Eine Bestätigung erscheint, dass der Datensatz erfolgreich gespeichert wurde.
@@ -76,7 +75,8 @@ Ablauf einer Abfrage:
 2. Der Benutzer gibt ein Filterkriterium ein (Filterkriterium wird abgefragt) zur Identifikation der bestehender Mitglieder.
 3. Die Software filtert die Mitgliederdaten entsprechend den eingegebenen Kriterien.
 4. Die gefundenen Mitgliederdaten werden dem Benutzer angezeigt.
-5. (nur Erweiterung) Der Benutzer kann die angezeigten Daten bearbeiten oder weitere Aktionen ausführen (z. B. speichern, E-Mail senden).
+5. Die Software zeigt automatisch den entsprechenden Mitgliederbeitrag an.
+6. (nur Erweiterung) Der Benutzer kann die angezeigten Daten bearbeiten oder weitere Aktionen ausführen (z. B. speichern, E-Mail senden).
 
 Nachbedingungen:
 Die gefilterten Mitgliederdaten werden korrekt angezeigt.
@@ -94,6 +94,7 @@ Die E-Mail wird erfolgreich versendet und an die angegebene Adresse der Mitglied
 
 ## Anleitung fürs Programm:
 
+
 Voraussetzungen:
 - CLion (IDE von JetBrains)
 - Compiler (z. B. GCC für Linux, MinGW für Windows oder Xcode Command Line Tools für macOS)
@@ -105,12 +106,18 @@ Projekt herunterladen:
 
 
 Programm ausführen:
+- Am einfachsten lässt sich das Programm über die ZIP-Datei im Ordner Projekt_Mailer ausführen -> einfach die enthaltene .exe Datei starten.
+  
+oder
 - Warte, bis CLion das Projekt vollständig indexiert hat.
 - Klicke auf Build. oder ctr.F9 (Windows)
 - Starte das Programm über das Pfeil Symbol oben rechts oder über Run.
   
+oder
+- Vorzugsweise wird das Programm über die Datei Projekt_Mailer.exe im Verzeichnis mailer/CMake/Build/Debug ausgeführt.
+- Die Mitgliederliste wird anschließend in der Datei adresse.csv angezeigt.
 
-
+  
 ## Flussdiagramm:
 
 ![Flussdiagramm](/Flussdiagramm.png)
@@ -121,4 +128,5 @@ Programm ausführen:
 
 
 End
+
 
