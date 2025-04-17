@@ -101,6 +101,14 @@ Warte, bis CLion das Projekt vollständig indexiert hat.
 Klicke auf Build. oder ctr.F9 (Windows)
 Starte das Programm über das Pfeil Symbol oben rechts oder über Run.
 
+
+// Flussdiagramm
+
+![Flussdiagramm](/Flussdiagramm.png)
+
+//Systemsequenzdiagramm
+
+![Systemsequenzdiagramm](Systemsequenzdiagramm.png)
 Ipsum Lorem 
 
 
