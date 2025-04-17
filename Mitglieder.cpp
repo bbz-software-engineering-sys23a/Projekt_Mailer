@@ -67,7 +67,7 @@ bool Mitglieder::schreiben_csv() const {
     ofstream datei(dateiname, ios::app);
     if (!datei)
     {
-        cerr << "Fehler beim Oeffnen der Datei!" << endl;
+        cerr << Texte::Error_File_Open << endl;
         return false;
     }
     if (!dateiExistiert)
@@ -79,7 +79,7 @@ bool Mitglieder::schreiben_csv() const {
                 datei << ";";
         }
         datei << '\n';
-        cout << "Datei erstellt und Spaltenueberschriften eingefuegt." << endl;
+        cout << Texte::mk_File_ok << endl;
     }
 
     // Bestimme den Typ anhand des dynamischen Typs
@@ -105,7 +105,7 @@ bool Mitglieder::schreiben_csv() const {
           << Geschlecht << ";"
           << typLetter << ";"
           << Geldbetrag << "\n";
-    cout << "Mitglied erfolgreich hinzugefügt!\n" << endl;
+    cout << Texte::Angelegt << endl;
     return true;
 }
 
@@ -114,7 +114,7 @@ string Mitglieder::filtern_csv() {
     ifstream datei(dateiname);
     if (!datei)
     {
-        cerr << "Datei konnte nicht geöffnet werden.\n";
+        cerr << Texte::Error_File_Open;
         return "";
     }
 
@@ -123,7 +123,7 @@ string Mitglieder::filtern_csv() {
         "PLZ", "Wohnort", "E-Mail", "Tel.Nr.", "Geschlecht", "Typ"
     };
 
-    cout << "\nNach welcher Spalte möchten Sie filtern?\n";
+    cout << Texte::Filter_Spalte << endl;
 
     for (size_t i = 0; i < spalten.size(); ++i)
     {
@@ -149,7 +149,7 @@ string Mitglieder::filtern_csv() {
         }
         break;
     }
-    cout << Texte::Bitte_1 << "den Suchbegriff ein: " << endl;
+    cout << Texte::Bitte_1 + Texte::Suchbegriff << endl;
     string suchbegriff;
     getline(cin, suchbegriff);
 
@@ -182,7 +182,7 @@ string Mitglieder::filtern_csv() {
 
     if (treffer.empty())
     {
-        cout << "Keine passenden Einträge gefunden.\n" << endl;
+        cout << Texte::No_Entry << endl;
         return "";
     }
     // Falls genau ein Treffer besteht, liefern wir diesen zurück.
@@ -206,12 +206,12 @@ string Mitglieder::filtern_csv() {
         // Rückgeben des Datensatzes mit angepasstem Beitrag.
         zusammenhang += ";" + beitrag;
 
-        cout << "\nGefundener Eintrag: \n" << endl;
+        cout << Texte::Found_Entry_1 << endl;
         return zusammenhang;
     }
     // Bei mehreren Treffern: Detailabfrage durchführen
     if (treffer.size() > 1) {
-        cout << "\nMehrere Einträge gefunden.\n" << endl;
+        cout << Texte::Found_Entry_multi << endl;
         for (const auto& zeile : treffer)
             {
             for (size_t i = 0; i < zeile.size(); ++i)
@@ -224,7 +224,7 @@ string Mitglieder::filtern_csv() {
     }
 
 
-        cout << "Bitte Mitgliedsnummer eingeben für Detailansicht: " << endl;
+        cout << Texte::Bitte_1 + Texte::Mitgliedsnummer << endl;
         string mitgliedsnr;
         getline(cin, mitgliedsnr);
         for (const auto& zeile : treffer)
@@ -250,7 +250,7 @@ string Mitglieder::filtern_csv() {
                 return zusammenhang;
             }
         }
-        cout << "Mitgliedsnummer nicht in der Auswahl gefunden.\n" << endl;
+        cout << Texte::No_Entry << endl;
         return "";
     }
     return "";
