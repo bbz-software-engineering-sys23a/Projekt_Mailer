@@ -2,23 +2,31 @@
 
 Autoren: Kai Knezevic / Peter Meier / Stephan Fankhauser
 
-**Projektbeschreibung:**
+## Inhaltsverzeichniss:
+
+Projektbeschreibung:
+
+Use Case:
+
+Anleitung fürs Programm:
+
+## Projektbeschreibung:
 
 Im Rahmen dieses Projekts wird eine Software entwickelt, mit der Daten von Vereinsmitgliedern erfasst, verarbeitet und gespeichert werden können.
 
 Die erfassten Informationen werden in einer CSV-Datei gespeichert. 
 Zusätzlich bietet die Anwendung die Möglichkeit, Datensätze nach bestimmten Kriterien zu filtern und über die Kommandozeile auszugeben.
 
-Die Software berücksichtigt verschiedene Mitgliedsarten und zugehörige Mitgliedsbeiträge.
+Die Software berücksichtigt verschiedene Mitgliederarten und zugehörige Mitgliederbeiträge.
 Fehlerhafte Eingaben sollen automatisch erkannt und entsprechend behandelt werden.
 
 Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadressen, erweitern den praktischen Nutzen der Anwendung.
 
-## Anforderungen
+## Anforderungen:
 | Funktion                                                                   | Muss | Wunsch |
 |----------------------------------------------------------------------------|------|--------|
-| Daten erfassen                                                             | x    | -      |
-| Daten in CSV-Datei speichern                                               | x    | -      |
+| Daten erfassen                                                             | X    | -      |
+| Daten in CSV-Datei speichern                                               | X    | -      |
 | Daten filtern und als String mit Trennzeichen";"ausgeben                   | X    | -      |
 | Falscheingaben abfangen                                                    | X    | -      |
 | Mitglieder-Art zuweisen und Mitlieder-Beitrag definieren                   | X    | -      |
@@ -28,16 +36,16 @@ Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadre
 
 
 
-Use Case: 
-- Mitgliedsdaten erfassen und speichern
-- Mitgliedsdaten Auslesen
+## Use Case: 
+- Mitgliederdaten erfassen und speichern
+- Mitgliederdaten Auslesen
 - E-mail versenden
-- 
+  
 Akteur: Vereinsmitarbeiter/in (z. B. Sekretariat)
 
 Ziel: 
-- Erfassung der Mitgliedsdaten und Speicherung in der CSV-Datei
-- Abruf der Mitgliedsdaten
+- Erfassung der Mitgliederdaten und Speicherung in der CSV-Datei
+- Abruf der Mitgliederdaten
 - (nur Erweiterung)Email versenden
   
 Auslöser: 
@@ -50,9 +58,9 @@ Die Software ist gestartet.
 
 Ablauf einer Erfassung:
 1. Der Benutzer wählt in der gegebenen Auswahl "Daten erfassen"
-1. Der Benutzer des Programms gibt die persönlichen Daten des Mitglieds ein (Name, Adresse, Geburtsdatum etc.).
-2. Die Mitgliedsart wird ausgewählt (z. B. aktiv, passiv, Ehrenmitglied).
-3. Die Software weist automatisch den entsprechenden Mitgliedsbeitrag zu.
+1. Der Benutzer des Programms gibt die persönlichen Daten der Mitglieder ein (Name, Adresse, Geburtsdatum etc.).
+2. Die Mitgliederart wird ausgewählt (z. B. aktiv, passiv, Ehrenmitglied).
+3. Die Software weist automatisch den entsprechenden Mitgliederbeitrag zu.
 4. Nach Abschluss der Eingabe klickt der User auf „Speichern“.
 5. Bei korrekter Eingabe wird der Datensatz in der CSV-Datei gespeichert.
 6. Eine Bestätigung erscheint, dass der Datensatz erfolgreich gespeichert wurde.
@@ -65,34 +73,34 @@ Bei ungültigen Eingaben zeigt die Software eine entsprechende Fehlermeldung an,
 
 Ablauf einer Abfrage:
 1. Der Benutzer wählt in der gegebenen Auswahl "Daten anzeigen"
-2. Der Benutzer gibt ein Filterkriterium ein (Filterkriterium wird abgefragt) zur Identifikation eines bestehenden Mitglieds.
+2. Der Benutzer gibt ein Filterkriterium ein (Filterkriterium wird abgefragt) zur Identifikation der bestehender Mitglieder.
 3. Die Software filtert die Mitgliederdaten entsprechend den eingegebenen Kriterien.
-4. Die gefundenen Mitgliedsdaten werden dem Benutzer angezeigt.
+4. Die gefundenen Mitgliederdaten werden dem Benutzer angezeigt.
 5. (nur Erweiterung) Der Benutzer kann die angezeigten Daten bearbeiten oder weitere Aktionen ausführen (z. B. speichern, E-Mail senden).
 
 Nachbedingungen:
-Die gefilterten Mitgliedsdaten werden korrekt angezeigt.
+Die gefilterten Mitgliederdaten werden korrekt angezeigt.
 
 (nur Erweiterung) Ablauf der E-Mail-Erstellung:
 1. Der Benutzer wählt in der gegebenen Auswahl "Ein Mail versenden"
 2. Der Benutzer wählt das Mitglied aus, an das eine E-Mail gesendet werden soll.
 3. Die Software erstellt automatisch eine E-Mail, basierend auf den zugewiesenen Mitgliedsdaten (z. B. Name, Beitrag).
 4. Der Benutzer hat die Möglichkeit, den E-Mail-Inhalt zu überprüfen und anzupassen.
-5. Die E-Mail wird an die hinterlegte Adresse des Mitglieds versendet.
+5. Die E-Mail wird an die hinterlegte Adresse der Mitglieder versendet.
 6. Eine Bestätigungsmeldung erscheint, dass die E-Mail erfolgreich versendet wurde.
 
 Nachbedingungen:
-Die E-Mail wird erfolgreich versendet und an die angegebene Adresse des Mitglieds zugestellt.
+Die E-Mail wird erfolgreich versendet und an die angegebene Adresse der Mitglieder zugestellt.
 
-How to Install:
+## Anleitung fürs Programm:
 
 Voraussetzungen:
 - CLion (IDE von JetBrains)
 - Compiler (z. B. GCC für Linux, MinGW für Windows oder Xcode Command Line Tools für macOS)
-- Git (um das Repository zu clonen)(optional)
+- Git (um Das Repository zu clonen)
 
 Projekt herunterladen:
-- Lade Dir den Projektordner . zip oder das Repository herunter. Zum klonen, git clone[ https://github.com/bbz-software-engineering-sys23a/Projekt_Mailer.git
+- Lade dir den Projektordner herunter. zip oder das Repository klonen, git clone[ https://github.com/bbz-software-engineering-sys23a/Projekt_Mailer.git
 - Öffne CLion und wähle „Open Project“ → navigiere zum Ordner des Projekts und öffne ihn.
 
 
@@ -100,15 +108,17 @@ Programm ausführen:
 - Warte, bis CLion das Projekt vollständig indexiert hat.
 - Klicke auf Build. oder ctr.F9 (Windows)
 - Starte das Programm über das Pfeil Symbol oben rechts oder über Run.
+  
 
 
- Flussdiagramm
+## Flussdiagramm:
 
 ![Flussdiagramm](/Flussdiagramm.png)
 
-/Systemsequenzdiagramm
+## Systemsequenzdiagramm:
 
 ![Systemsequenzdiagramm](Systemsequenzdiagramm.png)
 
 
+End
 
