@@ -155,10 +155,10 @@ string Mitglieder::filtern_csv() {
 
     string zeile;
     bool ersteZeile = true;
-    //bool gefunden = false;
+
     vector<vector<string>> treffer;
 
-    //cout << "\n--- Gefundene Einträge ---\n";
+
     while (getline(datei, zeile))
     {
         if (ersteZeile)
@@ -176,28 +176,10 @@ string Mitglieder::filtern_csv() {
         if (spaltenIndex < felder.size() && felder[spaltenIndex].find(suchbegriff) != string::npos)
         {
             treffer.push_back(felder);
-            /*for (size_t i = 0; i < felder.size(); ++i)
-            {*/
-                /*cout << felder[i];
-                if (i < felder.size() - 1)
-                    cout << ";";
-            }
-            cout << endl;
-            gefunden = true;*/
-                /*cout<<felder[i]<<(i+1<felder.size() ? ";" : "");
-            }
-            string typString = felder[10];
-            string beitrag;
-            if      (typString=="A") beitrag = Aktiv::getDefaultBeitrag();
-            else if (typString=="P") beitrag = Passiv::getDefaultBeitrag();
-            else if (typString=="E") beitrag = Ehrenmitglied::getDefaultBeitrag();
-            cout<<";"<<beitrag<<"\n";
 
-            treffer.push_back(felder);
-            gefunden = true;*/
         }
     }
-    //if (!gefunden)
+
     if (treffer.empty())
     {
         cout << "Keine passenden Einträge gefunden.\n" << endl;
@@ -209,8 +191,7 @@ string Mitglieder::filtern_csv() {
         const auto& zeile = treffer[0];
         string zusammenhang;
         string beitrag;
-        /*if (zeile.size() >= 11)
-        {*/
+
             zusammenhang = zeile[0] + ";" + zeile[1] + ";" + zeile[2] + ";" +
                            zeile[3] + ";" + zeile[4] + ";" + zeile[5] + ";" +
                            zeile[6] + ";" + zeile[7] + ";" + zeile[8] + ";" +
@@ -221,10 +202,10 @@ string Mitglieder::filtern_csv() {
         if      (typString=="A") beitrag = Aktiv::getDefaultBeitrag();
         else if (typString=="P") beitrag = Passiv::getDefaultBeitrag();
         else if (typString=="E") beitrag = Ehrenmitglied::getDefaultBeitrag();
-            //if (zeile.size() == 12)
-                // Rückgeben des Datensatzes mit angepasstem Beitrag.
-                zusammenhang += ";" + beitrag;
-       /* }*/
+
+        // Rückgeben des Datensatzes mit angepasstem Beitrag.
+        zusammenhang += ";" + beitrag;
+
         cout << "\nGefundener Eintrag: \n" << endl;
         return zusammenhang;
     }
@@ -252,13 +233,11 @@ string Mitglieder::filtern_csv() {
             {
                 string zusammenhang;
                 string beitrag;
-                /*if (zeile.size() >= 11)
-                {*/
+
                 zusammenhang = zeile[0] + ";" + zeile[1] + ";" + zeile[2] + ";" +
                     zeile[3] + ";" + zeile[4] + ";" + zeile[5] + ";" +
                         zeile[6] + ";" + zeile[7] + ";" + zeile[8] + ";" +
                             zeile[9] + ";" + zeile[10];
-                    //if (zeile.size() == 12)
 
                 // Dynamisches Anhängen des Mitgliederbeitrags
                 string typString = zeile[10];
