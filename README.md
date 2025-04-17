@@ -117,6 +117,18 @@ oder
 - Vorzugsweise wird das Programm über die Datei Projekt_Mailer.exe im Verzeichnis mailer/CMake/Build/Debug ausgeführt.
 - Die Mitgliederliste wird anschließend in der Datei adresse.csv angezeigt.
 
+
+## Fazit:
+
+| Funktion / Kriterium | Pflicht / Wunsch | Erfüllt?
+|--------------------------------------------------------------|-----------|-----------|
+| Mitgliederdaten erfassen                                     | Muss      |  Ja       |
+| Speicherung der Daten in einer CSV-Datei                     | Muss      |  Ja       |
+| Daten filtern und als String mit Trennzeichen „;“ ausgeben   | Muss      |  Ja       |
+| Fehlerhafte Eingaben erkennen und behandeln                  | Muss      |  Ja       |
+| Mitgliederart zuweisen und Mitgliederbeitrag berechnen       | Wunsch    |  Ja       |
+| E-Mail automatisch erstellen anhand eines Datensatzes        | Wunsch    | Teilweise |
+| Druckbare Adresse anhand des Adress-Strings generieren       | Wunsch    | Teilweise |
   
 ## Flussdiagramm:
 
