@@ -43,7 +43,7 @@ namespace Texte {
 
     // Fehler
     const string Eingabe_ungültig = "Ungültige Eingabe\n";
-    const string Error_Speichern = "Fehler beim Speichern der Einstellungen\n;
+    const string Error_Speichern = "Fehler beim Speichern der Einstellungen\n";
     const string Error_Typ = "Ungültiger Mitgliedstyp! ";
     const string Error_Ausgabe = "keine Ausgabe möglich. \n ";
     const string Error_File_Open = "Fehler beim Oeffnen der Datei!\n";
