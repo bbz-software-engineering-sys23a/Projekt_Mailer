@@ -1,11 +1,14 @@
 //
 // Created by kai0 on 14/04/2025.
 //
+#include "Texte.h"
 #include "Aktiv.h"
+
+string Aktiv::defaultBeitrag = "50 Fr.";
 
 Aktiv::Aktiv(string telefon)
     : Mitglieder(telefon) {
-    Geldbetrag = "50 Fr.";
+    Geldbetrag = defaultBeitrag;
 }
 
 void Aktiv::Datenout() const {
@@ -15,4 +18,12 @@ void Aktiv::Datenout() const {
          << ", Betrag: " << getGeldbetrag()
          << ", Mitgliedernr. " << getMitgliedernummer()
          << endl;
+}
+
+string Aktiv::getDefaultBeitrag() {
+    return defaultBeitrag;
+}
+
+void Aktiv::setDefaultBeitrag(const string &betrag) {
+    defaultBeitrag = betrag;
 }

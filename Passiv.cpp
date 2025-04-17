@@ -2,10 +2,13 @@
 // Created by kai0 on 14/04/2025.
 //
 #include "Passiv.h"
+#include "Texte.h"
+
+string Passiv::defaultBeitrag = "30 Fr.";
 
 Passiv::Passiv(string telefon)
     : Mitglieder(telefon) {
-    Geldbetrag = "30 Fr.";
+    Geldbetrag = defaultBeitrag;
 }
 
 void Passiv::Datenout() const {
@@ -17,3 +20,10 @@ void Passiv::Datenout() const {
          << endl;
 }
 
+string Passiv::getDefaultBeitrag() {
+    return defaultBeitrag;
+}
+
+void Passiv::setDefaultBeitrag(const string &betrag) {
+    defaultBeitrag = betrag;
+}

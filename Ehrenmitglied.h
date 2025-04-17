@@ -6,6 +6,7 @@
 #define EHRENMITGLIED_H
 
 #include "Mitglieder.h"
+#include "Texte.h"
 #include <string>
 #include <iostream>
 
@@ -15,6 +16,11 @@ class Ehrenmitglied final : public Mitglieder {
 public:
     Ehrenmitglied(string telefon);
     void Datenout() const override;
+
+    static string getDefaultBeitrag();
+    static void setDefaultBeitrag(const string &betrag);
+private:
+    static string defaultBeitrag;
 };
 
 #endif
