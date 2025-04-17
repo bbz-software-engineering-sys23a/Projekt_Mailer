@@ -29,7 +29,7 @@ Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadre
 | Daten in CSV-Datei speichern                                               | X    | -      |
 | Daten filtern und als String mit Trennzeichen";"ausgeben                   | X    | -      |
 | Falscheingaben abfangen                                                    | X    | -      |
-| Mitglieder-Art zuweisen und Mitlieder-Beitrag definieren                   | X    | -      |
+| Mitglieder-Art zuweisen und Mitlieder-Beitrag definieren                   | -    | X      |
 | Anhand des Datensatzes ein E-Mail generieren                               |      | X      |
 | Anhand des ausgegebenen Adressen-Strings eine druckbare Adresse generieren | -    | X      |
                                                              
