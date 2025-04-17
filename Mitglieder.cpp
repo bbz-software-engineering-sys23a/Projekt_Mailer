@@ -229,9 +229,20 @@ string Mitglieder::filtern_csv() {
         return zusammenhang;
     }
     // Bei mehreren Treffern: Detailabfrage durchführen
-    if (treffer.size() > 1)
-    {
+    if (treffer.size() > 1) {
         cout << "\nMehrere Einträge gefunden.\n" << endl;
+        for (const auto& zeile : treffer)
+            {
+            for (size_t i = 0; i < zeile.size(); ++i)
+                {
+                cout << zeile[i];
+                if (i < zeile.size() - 1)
+                    cout << ";";
+            }
+        cout << endl;
+    }
+
+
         cout << "Bitte Mitgliedsnummer eingeben für Detailansicht: " << endl;
         string mitgliedsnr;
         getline(cin, mitgliedsnr);
@@ -243,16 +254,20 @@ string Mitglieder::filtern_csv() {
                 string beitrag;
                 /*if (zeile.size() >= 11)
                 {*/
-                    zusammenhang = zeile[0] + ";" + zeile[1] + ";" + zeile[2] + ";" +
-                                   zeile[3] + ";" + zeile[4] + ";" + zeile[5] + ";" +
-                                   zeile[6] + ";" + zeile[7] + ";" + zeile[8] + ";" +
-                                   zeile[9] + ";" + zeile[10];
+                zusammenhang = zeile[0] + ";" + zeile[1] + ";" + zeile[2] + ";" +
+                    zeile[3] + ";" + zeile[4] + ";" + zeile[5] + ";" +
+                        zeile[6] + ";" + zeile[7] + ";" + zeile[8] + ";" +
+                            zeile[9] + ";" + zeile[10];
                     //if (zeile.size() == 12)
-                        zusammenhang += ";" + beitrag;
-                    string typString = zeile[10];
-                    if      (typString=="A") beitrag = Aktiv::getDefaultBeitrag();
-                    else if (typString=="P") beitrag = Passiv::getDefaultBeitrag();
-                    else if (typString=="E") beitrag = Ehrenmitglied::getDefaultBeitrag();
+
+                // Dynamisches Anhängen des Mitgliederbeitrags
+                string typString = zeile[10];
+                if      (typString=="A") beitrag = Aktiv::getDefaultBeitrag();
+                else if (typString=="P") beitrag = Passiv::getDefaultBeitrag();
+                else if (typString=="E") beitrag = Ehrenmitglied::getDefaultBeitrag();
+
+                zusammenhang += ";" + beitrag;
+
                 return zusammenhang;
             }
         }
