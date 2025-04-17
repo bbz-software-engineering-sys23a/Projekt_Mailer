@@ -113,7 +113,7 @@ Programm ausführen:
 - Vorzugsweise wird das Programm über die Datei Projekt_Mailer.exe im Verzeichnis mailer/CMake/Build/Debug ausgeführt.
 - Die Mitgliederliste wird anschließend in der Datei adresse.csv angezeigt.
 
-- 
+  
 ## Flussdiagramm:
 
 ![Flussdiagramm](/Flussdiagramm.png)
