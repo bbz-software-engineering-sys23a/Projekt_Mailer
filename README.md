@@ -101,7 +101,7 @@ Programm ausführen:
 - Klicke auf Build. oder ctr.F9 (Windows)
 - Starte das Programm über das Pfeil Symbol oben rechts oder über Run.
   
-![d44808b4-f44e-481b-8a47-f65218fad9ee](https://github.com/user-attachments/assets/baa47ec9-682d-4a51-83ee-87b655d23389)
+
 
 ## Flussdiagramm:
 
