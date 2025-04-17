@@ -28,3 +28,33 @@ Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadre
 
 Ipsum Lorem
 
+Use Case
+Use Case: Mitgliedsdaten erfassen und speichern
+Akteur: Vereinsmitarbeiter/in (z. B. Sekretariat)
+
+Ziel: Erfassung der Mitgliedsdaten und Speicherung in der CSV-Datei
+Auslöser: 
+- Ein neues Vereinsmitglied soll aufgenommen werden.
+- Ein vorhandenes Mitglied kann gefiltert werden.
+- (nur erwieiterung) Eine Mail wird mit der Automatischen zuweisung der Mitgliedsdaten erstellt.
+- 
+Vorbedingungen:
+Die Software ist gestartet.
+
+Ablauf:
+1. Der User ders Programms gibt die persönlichen Daten des Mitglieds ein (Name, Adresse, Geburtsdatum etc.).
+2. Die Mitgliedsart wird ausgewählt (z. B. aktiv, passiv, Ehrenmitglied).
+3. Die Software weist automatisch den entsprechenden Mitgliedsbeitrag zu.
+4. Nach Abschluss der Eingabe klickt der/die Mitarbeiter/in auf „Speichern“.
+5. Die Daten werden validiert (z. B. Pflichtfelder, richtige Formate).
+6. Bei korrekter Eingabe wird der Datensatz in der CSV-Datei gespeichert.
+7. Eine Bestätigung erscheint, dass der Datensatz erfolgreich gespeichert wurde.
+
+Nachbedingungen:
+Der neue Datensatz ist in der CSV-Datei vorhanden und korrekt formatiert.
+
+Korrekturablauf:
+Bei ungültigen Eingaben zeigt die Software eine entsprechende Fehlermeldung an, und der Benutzer kann die Eingabe korrigieren.
+
+
+
