@@ -84,6 +84,23 @@ Die gefilterten Mitgliedsdaten werden korrekt angezeigt.
 Nachbedingungen:
 Die E-Mail wird erfolgreich versendet und an die angegebene Adresse des Mitglieds zugestellt.
 
+How to Install:
+
+Voraussetzungen:
+CLion (IDE von JetBrains)
+Compiler (z. B. GCC für Linux, MinGW für Windows oder Xcode Command Line Tools für macOS)
+Git (um Das Repository zu clonen)
+
+Projekt herunterladen:
+Lade dir den Projektordner herunter. zip oder das Repository klonen 
+git clone https://github.com/dein-benutzername/vereinsverwaltung.git
+Öffne CLion und wähle „Open Project“ → navigiere zum Ordner des Projekts und öffne ihn.
+
+Programm ausführen:
+Warte, bis CLion das Projekt vollständig indexiert hat.
+Klicke auf Build. oder ctr.F9 (Windows)
+Starte das Programm über das Pfeil Symbol oben rechts oder über Run.
+
 Ipsum Lorem 
 
 
