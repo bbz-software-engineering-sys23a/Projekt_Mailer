@@ -41,6 +41,11 @@ namespace Texte {
     // Fehler
     const string Eingabe_ungültig = "Ungültige Eingabe\n";
 
+    // Rückmeldungen
+    const string Angepasst = "Ihre Änderungen wurden gespeichert.\n";
+    const string Betrag_A = "Der bisherige Mitgliederbeitrag ist: ";
+    const string Betrag_N = "Der neue Mitgliederbeitrag ist: ";
+
 }
 
 

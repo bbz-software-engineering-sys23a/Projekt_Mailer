@@ -26,29 +26,10 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y, const string &text
 
 void betragAnpassen();
 
-/*bool schreiben_csv(string mitgliedernummer,string nachname,string vorname,string strasse,string hausnummer,
-    string plz,string wohnort,string email,string telefonnummer,string geschlecht,string typ);*/
 
 //K
 Mitglieder* mitgliedZuweisen(const string& telefonnummer, const string& typ);
-//,string plz,string wohnort,string email,string& telefonnummer,string geschlecht,string typ);
 
-//string filtern_csv();
-
-/*
-string mitgliedernummer_;
-string nachname_;
-string vorname_;
-string geschlecht_;
-string email_;
-string strasse_;
-string plz_;
-string wohnort_;
-string typ_;
-string telefonnummer_;
-string hausnummer_;
-string zusammenhang;
-*/
 
 string nachname;
 string vorname;
@@ -310,25 +291,31 @@ void betragAnpassen() {
 
     switch (auswahl) {
         case 1:
+            cout << Texte::Betrag_A << Aktiv::getDefaultBeitrag() << "\n" << endl;
             cout << Texte::Bitte_1 + Texte::Betrag << endl;
             cin >> eingabe;
             auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Betrag);
             beitragAnpassen = to_string(auswahl) + " SFr.";
             Aktiv::setDefaultBeitrag(beitragAnpassen);
+            cout << Texte::Betrag_N << Aktiv::getDefaultBeitrag() << "\n"<< endl;
         break;
         case 2:
+            cout << Texte::Betrag_A << Passiv::getDefaultBeitrag() << "\n" << endl;
             cout << Texte::Bitte_1 + Texte::Betrag << endl;
             cin >> eingabe;
             auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Betrag);
             beitragAnpassen = to_string(auswahl)  + " SFr.";
             Passiv::setDefaultBeitrag(beitragAnpassen);
+            cout << Texte::Betrag_N << Passiv::getDefaultBeitrag() << "\n"<< endl;
         break;
         case 3:
+            cout << Texte::Betrag_A << Ehrenmitglied::getDefaultBeitrag() << "\n" << endl;
             cout << Texte::Bitte_1 + Texte::Betrag << endl;
             cin >> eingabe;
             auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Betrag);
             beitragAnpassen = to_string(auswahl) + " SFr.";
             Ehrenmitglied::setDefaultBeitrag(beitragAnpassen);
+            cout << Texte::Betrag_N << Ehrenmitglied::getDefaultBeitrag() << "\n"<< endl;
         break;
         case 4:
             return;
