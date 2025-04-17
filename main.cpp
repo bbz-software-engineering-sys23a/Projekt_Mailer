@@ -61,11 +61,14 @@ string telefonnummer;
 string geschlecht;
 string typ;
 
-//string mitgliedernummer;
+//Configfile für Mitgliedernummer und Typus
+void ladeConfig();
+void saveConfig();
 
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
+    ladeConfig();
 
     bool x = true;
     //const int  mitgliedernummer;
@@ -98,9 +101,11 @@ int main()
             break;
             case 4:
                 x = false;
+                saveConfig();
             break;
             case 5:
                 betragAnpassen();
+                saveConfig();
             break;
             default:
             break;
@@ -109,6 +114,29 @@ int main()
     return 0;
 }
 
+void ladeConfig() {
+    ifstream cfg("settings.cfg");
+    if (!cfg) return;
+    string line;
+    while (getline(cfg,line)) {
+        auto p = line.find('=');
+        if (p==string::npos) continue;
+        string key = line.substr(0,p), val = line.substr(p+1);
+        if      (key=="counter") Mitglieder::setCounter(stoi(val));
+        else if (key=="A")       Aktiv::setDefaultBeitrag(val);
+        else if (key=="P")       Passiv::setDefaultBeitrag(val);
+        else if (key=="E")       Ehrenmitglied::setDefaultBeitrag(val);
+    }
+}
+
+void saveConfig() {
+    ofstream cfg("settings.cfg");
+    if (!cfg) { cerr<<"Fehler beim Speichern der Einstellungen\n"; return; }
+    cfg<<"counter="<<Mitglieder::getCounter()<<"\n"
+       <<"A="      <<Aktiv::getDefaultBeitrag()      <<"\n"
+       <<"P="      <<Passiv::getDefaultBeitrag()     <<"\n"
+       <<"E="      <<Ehrenmitglied::getDefaultBeitrag()<<"\n";
+}
 
 
 void datenErfassen() {
@@ -193,6 +221,7 @@ void datenErfassen() {
         mitglied->schreiben_csv();
         mitglied->Datenout();
         delete mitglied;
+        saveConfig();
     } else {
         cout << "Ungültiger Mitgliedstyp – keine Ausgabe möglich." << endl;
     }
@@ -267,6 +296,7 @@ int falscheingabeAbfangen(const string &eingabe,int x, int y,const string &text)
         }
         return auswahl;
     }
+    return -1;
 }
 
 void betragAnpassen() {
@@ -283,7 +313,7 @@ void betragAnpassen() {
             cout << Texte::Bitte_1 + Texte::Betrag << endl;
             cin >> eingabe;
             auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Betrag);
-            beitragAnpassen = auswahl;
+            beitragAnpassen = to_string(auswahl);
             Aktiv::setDefaultBeitrag(beitragAnpassen);
         break;
         case 2:

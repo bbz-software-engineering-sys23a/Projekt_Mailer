@@ -23,6 +23,12 @@ protected:
     string Geldbetrag;
 
 public:
+
+    // Persistenz Counter Mitgliedernummer
+    static void setCounter(int i);
+    static int getCounter();
+
+    // Daten der Mitglieder
     string Nachname;
     string Vorname;
     string Geschlecht;
@@ -43,7 +49,7 @@ public:
     virtual void Datenout() const;
     virtual ~Mitglieder() = default;
 
-    // Neue Methoden: Schreiben eines Datensatzes in die CSV und Filtern der CSV
+    // Schreiben eines Datensatzes in die CSV Datei und Filtern der Datensätze in der CSV Datei
     bool schreiben_csv() const;
     static string filtern_csv();
 };

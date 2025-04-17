@@ -9,6 +9,15 @@
 
 int Mitglieder::MitgliedernummerCounter = 1;
 
+// Persistenz Counter Mitgliedernummer
+void Mitglieder::setCounter(int j) {
+    MitgliedernummerCounter = j;
+}
+
+int Mitglieder::getCounter() {
+    return MitgliedernummerCounter;
+}
+
 Mitglieder::Mitglieder(string telefon) : Telnummer(telefon) {
     Mitgliedernummer = to_string(MitgliedernummerCounter++);
     Geldbetrag = "0 Fr.";
@@ -44,7 +53,7 @@ bool Mitglieder::schreiben_csv() const {
     const string dateiname = "adresse.csv";
     const vector<string> spalten = {
         "Mitglied-Nr.", "Name", "Vorname", "Strasse", "Hausnummer",
-        "PLZ", "Wohnort", "E-Mail", "Tel.Nr.", "Geschlecht", "Typ", "Mitgliederbeitrag"
+        "PLZ", "Wohnort", "E-Mail", "Tel.Nr.", "Geschlecht", "Typ"
     };
 
     bool dateiExistiert = filesystem::exists(dateiname);
@@ -89,7 +98,7 @@ bool Mitglieder::schreiben_csv() const {
           << Geschlecht << ";"
           << typLetter << ";"
           << Geldbetrag << "\n";
-    cout << "Adresszeile erfolgreich hinzugefuegt!" << endl;
+    cout << "Adresszeile erfolgreich hinzugefuegt!\n" << endl;
     return true;
 }
 
@@ -104,19 +113,19 @@ string Mitglieder::filtern_csv() {
 
     vector<string> spalten = {
         "Mitglied-Nr.", "Name", "Vorname", "Strasse", "Hausnummer",
-        "PLZ", "Wohnort", "E-Mail", "Tel.Nr.", "Geschlecht", "Typ", "Mitgliederbeitrag"
+        "PLZ", "Wohnort", "E-Mail", "Tel.Nr.", "Geschlecht", "Typ"
     };
 
     cout << "\nNach welcher Spalte möchten Sie filtern?\n";
     // Für die Filterung nutzen wir die ersten 11 Spalten (letzte Spalte ist Mitgliederbeitrag)
-    for (size_t i = 0; i < spalten.size() - 1; ++i)
+    for (size_t i = 0; i < spalten.size(); ++i)
     {
         cout << i << ": " << spalten[i] << endl;
     }
     int spaltenIndex;
     while (true)
     {
-        cout <<"Spaltenindex eingeben (0 bis " << spalten.size() - 2 << "): ";
+        cout <<"Spaltenindex eingeben (0 bis " << spalten.size() - 1 << "): ";
         cin >> spaltenIndex;
         if (cin.fail())
         {
@@ -126,9 +135,9 @@ string Mitglieder::filtern_csv() {
             continue;
         }
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        if (spaltenIndex < 0 || spaltenIndex >= static_cast<int>(spalten.size()) - 1)
+        if (spaltenIndex < 0 || spaltenIndex >= static_cast<int>(spalten.size()))
         {
-            cerr << "Ungültiger Spaltenindex. Bitte einen Wert zwischen 0 und " << spalten.size() - 2 << " eingeben.\n";
+            cerr << "Ungültiger Spaltenindex. Bitte einen Wert zwischen 0 und " << spalten.size() - 1 << " eingeben.\n";
             continue;
         }
         break;
@@ -162,11 +171,22 @@ string Mitglieder::filtern_csv() {
             treffer.push_back(felder);
             for (size_t i = 0; i < felder.size(); ++i)
             {
-                cout << felder[i];
+                /*cout << felder[i];
                 if (i < felder.size() - 1)
                     cout << ";";
             }
             cout << endl;
+            gefunden = true;*/
+                cout<<felder[i]<<(i+1<felder.size() ? ";" : "");
+            }
+            string typString = felder[10];
+            string beitrag;
+            if      (typString=="A") beitrag = Aktiv::getDefaultBeitrag();
+            else if (typString=="P") beitrag = Passiv::getDefaultBeitrag();
+            else if (typString=="E") beitrag = Ehrenmitglied::getDefaultBeitrag();
+            cout<<";"<<beitrag<<"\n";
+
+            treffer.push_back(felder);
             gefunden = true;
         }
     }
@@ -180,15 +200,20 @@ string Mitglieder::filtern_csv() {
     {
         const auto& zeile = treffer[0];
         string zusammenhang;
-        if (zeile.size() >= 11)
-        {
+        string beitrag;
+        /*if (zeile.size() >= 11)
+        {*/
             zusammenhang = zeile[0] + ";" + zeile[1] + ";" + zeile[2] + ";" +
                            zeile[3] + ";" + zeile[4] + ";" + zeile[5] + ";" +
                            zeile[6] + ";" + zeile[7] + ";" + zeile[8] + ";" +
                            zeile[9] + ";" + zeile[10];
-            if (zeile.size() == 12)
-                zusammenhang += ";" + zeile[11];
-        }
+        string typString = zeile[10];
+        if      (typString=="A") beitrag = Aktiv::getDefaultBeitrag();
+        else if (typString=="P") beitrag = Passiv::getDefaultBeitrag();
+        else if (typString=="E") beitrag = Ehrenmitglied::getDefaultBeitrag();
+            //if (zeile.size() == 12)
+                zusammenhang += ";" + beitrag;
+       /* }*/
         return zusammenhang;
     }
     // Bei mehreren Treffern: Detailabfrage durchführen
@@ -203,15 +228,19 @@ string Mitglieder::filtern_csv() {
             if (!zeile.empty() && zeile[0] == mitgliedsnr)
             {
                 string zusammenhang;
-                if (zeile.size() >= 11)
-                {
+                string beitrag;
+                /*if (zeile.size() >= 11)
+                {*/
                     zusammenhang = zeile[0] + ";" + zeile[1] + ";" + zeile[2] + ";" +
                                    zeile[3] + ";" + zeile[4] + ";" + zeile[5] + ";" +
                                    zeile[6] + ";" + zeile[7] + ";" + zeile[8] + ";" +
                                    zeile[9] + ";" + zeile[10];
-                    if (zeile.size() == 12)
-                        zusammenhang += ";" + zeile[11];
-                }
+                    //if (zeile.size() == 12)
+                        zusammenhang += ";" + beitrag;
+                    string typString = zeile[10];
+                    if      (typString=="A") beitrag = Aktiv::getDefaultBeitrag();
+                    else if (typString=="P") beitrag = Passiv::getDefaultBeitrag();
+                    else if (typString=="E") beitrag = Ehrenmitglied::getDefaultBeitrag();
                 return zusammenhang;
             }
         }
