@@ -39,7 +39,7 @@ Ziel:
 - Erfassung der Mitgliedsdaten und Speicherung in der CSV-Datei
 - Abruf der Mitgliedsdaten
 - (nur Erweiterung)Email versenden
-- 
+  
 Auslöser: 
 - Ein neues Vereinsmitglied soll aufgenommen werden.
 - Ein vorhandenes Mitglied kann gefiltert werden.
