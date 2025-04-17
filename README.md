@@ -14,7 +14,7 @@ Fehlerhafte Eingaben sollen automatisch erkannt und entsprechend behandelt werde
 
 Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadressen, erweitern den praktischen Nutzen der Anwendung.
 
-## Anforderungen
+## Anforderungen:
 | Funktion                                                                   | Muss | Wunsch |
 |----------------------------------------------------------------------------|------|--------|
 | Daten erfassen                                                             | x    | -      |
@@ -103,11 +103,11 @@ Programm ausführen:
   
 ![d44808b4-f44e-481b-8a47-f65218fad9ee](https://github.com/user-attachments/assets/baa47ec9-682d-4a51-83ee-87b655d23389)
 
-## Flussdiagramm
+## Flussdiagramm:
 
 ![Flussdiagramm](/Flussdiagramm.png)
 
-## Systemsequenzdiagramm
+## Systemsequenzdiagramm:
 
 ![Systemsequenzdiagramm](Systemsequenzdiagramm.png)
 
