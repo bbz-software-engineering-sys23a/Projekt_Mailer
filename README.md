@@ -108,8 +108,8 @@ Programm ausführen:
 - Warte, bis CLion das Projekt vollständig indexiert hat.
 - Klicke auf Build. oder ctr.F9 (Windows)
 - Starte das Programm über das Pfeil Symbol oben rechts oder über Run.
-  
-
+- Vorzugsweise wird das Programm über die Datei Projekt_Mailer.exe im Verzeichnis mailer/CMake/Build/Debug ausgeführt.
+- Die Mitgliederliste wird anschließend in der Datei adresse.csv angezeigt.
 
 ## Flussdiagramm:
 
