@@ -10,6 +10,8 @@ Use Case:
 
 Anleitung fürs Programm:
 
+Fazit:
+
 ## Projektbeschreibung:
 
 Im Rahmen dieses Projekts wird eine Software entwickelt, mit der Daten von Vereinsmitgliedern erfasst, verarbeitet und gespeichert werden können.
