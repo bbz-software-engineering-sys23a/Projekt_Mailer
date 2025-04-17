@@ -45,7 +45,7 @@ Akteur: Vereinsmitarbeiter/in (z. B. Sekretariat)
 
 Ziel: 
 - Erfassung der Mitgliedsdaten und Speicherung in der CSV-Datei
-- Abruf der Mitgliedsdaten
+- Abruf der Mitgliederdaten
 - (nur Erweiterung)Email versenden
   
 Auslöser: 
@@ -58,9 +58,9 @@ Die Software ist gestartet.
 
 Ablauf einer Erfassung:
 1. Der Benutzer wählt in der gegebenen Auswahl "Daten erfassen"
-1. Der Benutzer des Programms gibt die persönlichen Daten des Mitglieds ein (Name, Adresse, Geburtsdatum etc.).
-2. Die Mitgliedsart wird ausgewählt (z. B. aktiv, passiv, Ehrenmitglied).
-3. Die Software weist automatisch den entsprechenden Mitgliedsbeitrag zu.
+1. Der Benutzer des Programms gibt die persönlichen Daten der Mitglieder ein (Name, Adresse, Geburtsdatum etc.).
+2. Die Mitgliederart wird ausgewählt (z. B. aktiv, passiv, Ehrenmitglied).
+3. Die Software weist automatisch den entsprechenden Mitgliederbeitrag zu.
 4. Nach Abschluss der Eingabe klickt der User auf „Speichern“.
 5. Bei korrekter Eingabe wird der Datensatz in der CSV-Datei gespeichert.
 6. Eine Bestätigung erscheint, dass der Datensatz erfolgreich gespeichert wurde.
@@ -90,7 +90,7 @@ Die gefilterten Mitgliedsdaten werden korrekt angezeigt.
 6. Eine Bestätigungsmeldung erscheint, dass die E-Mail erfolgreich versendet wurde.
 
 Nachbedingungen:
-Die E-Mail wird erfolgreich versendet und an die angegebene Adresse des Mitglieds zugestellt.
+Die E-Mail wird erfolgreich versendet und an die angegebene Adresse der Mitglieder zugestellt.
 
 ## Anleitung fürs Programm:
 
