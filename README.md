@@ -28,7 +28,7 @@ Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadre
 
 
 
-Use Case: 
+//Use Case: 
 - Mitgliedsdaten erfassen und speichern
 - Mitgliedsdaten Auslesen
 - E-mail versenden
