@@ -73,9 +73,9 @@ Bei ungültigen Eingaben zeigt die Software eine entsprechende Fehlermeldung an,
 
 Ablauf einer Abfrage:
 1. Der Benutzer wählt in der gegebenen Auswahl "Daten anzeigen"
-2. Der Benutzer gibt ein Filterkriterium ein (Filterkriterium wird abgefragt) zur Identifikation eines bestehenden Mitglieds.
+2. Der Benutzer gibt ein Filterkriterium ein (Filterkriterium wird abgefragt) zur Identifikation der bestehender Mitglieder.
 3. Die Software filtert die Mitgliederdaten entsprechend den eingegebenen Kriterien.
-4. Die gefundenen Mitgliedsdaten werden dem Benutzer angezeigt.
+4. Die gefundenen Mitgliederdaten werden dem Benutzer angezeigt.
 5. (nur Erweiterung) Der Benutzer kann die angezeigten Daten bearbeiten oder weitere Aktionen ausführen (z. B. speichern, E-Mail senden).
 
 Nachbedingungen:
@@ -86,7 +86,7 @@ Die gefilterten Mitgliederdaten werden korrekt angezeigt.
 2. Der Benutzer wählt das Mitglied aus, an das eine E-Mail gesendet werden soll.
 3. Die Software erstellt automatisch eine E-Mail, basierend auf den zugewiesenen Mitgliedsdaten (z. B. Name, Beitrag).
 4. Der Benutzer hat die Möglichkeit, den E-Mail-Inhalt zu überprüfen und anzupassen.
-5. Die E-Mail wird an die hinterlegte Adresse des Mitglieds versendet.
+5. Die E-Mail wird an die hinterlegte Adresse der Mitglieder versendet.
 6. Eine Bestätigungsmeldung erscheint, dass die E-Mail erfolgreich versendet wurde.
 
 Nachbedingungen:
