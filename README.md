@@ -1,1 +1,82 @@
-# Projekt_Mailer
+Projekt_Mailer
+Autoren: Kai Knezevic / Peter Meier / Stephan Fankhauser
+
+Projektbeschreibung:
+
+Im Rahmen dieses Projekts wird eine Software entwickelt, mit der Daten von Vereinsmitgliedern erfasst, verarbeitet und gespeichert werden können.
+
+Die erfassten Informationen werden in einer CSV-Datei gespeichert. Zusätzlich bietet die Anwendung die Möglichkeit, Datensätze nach bestimmten Kriterien zu filtern und über die Kommandozeile auszugeben.
+
+Die Software berücksichtigt verschiedene Mitgliedsarten und zugehörige Mitgliedsbeiträge. Fehlerhafte Eingaben sollen automatisch erkannt und entsprechend behandelt werden.
+
+Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadressen, erweitern den praktischen Nutzen der Anwendung.
+
+Anforderungen
+Funktion	Muss	Wunsch
+Daten erfassen	x	-
+Daten in CSV-Datei speichern	x	-
+Daten filtern und als String mit Trennzeichen";"ausgeben	X	-
+Falscheingaben abfangen	X	-
+Mitglieder-Art zuweisen und Mitlieder-Beitrag definieren	X	-
+Anhand des Datensatzes ein E-Mail generieren		X
+Anhand des ausgegebenen Adressen-Strings eine druckbare Adresse generieren	-	X
+Use Case:
+
+Mitgliedsdaten erfassen und speichern
+Mitgliedsdaten Auslesen
+E-mail versenden
+Akteur: Vereinsmitarbeiter/in (z. B. Sekretariat)
+
+Ziel:
+
+Erfassung der Mitgliedsdaten und Speicherung in der CSV-Datei
+Abruf der Mitgliedsdaten
+(nur Erweiterung)Email versenden
+Auslöser:
+
+Ein neues Vereinsmitglied soll aufgenommen werden.
+Ein vorhandenes Mitglied kann gefiltert werden.
+(nur Erwieiterung) An ein Mitglied soll eine E-mail versendet werden
+Vorbedingungen: Die Software ist gestartet.
+
+Ablauf einer Erfassung:
+
+Der Benutzer wählt in der gegebenen Auswahl "Daten erfassen"
+Der Benutzer des Programms gibt die persönlichen Daten des Mitglieds ein (Name, Adresse, Geburtsdatum etc.).
+Die Mitgliedsart wird ausgewählt (z. B. aktiv, passiv, Ehrenmitglied).
+Die Software weist automatisch den entsprechenden Mitgliedsbeitrag zu.
+Nach Abschluss der Eingabe klickt der User auf „Speichern“.
+Bei korrekter Eingabe wird der Datensatz in der CSV-Datei gespeichert.
+Eine Bestätigung erscheint, dass der Datensatz erfolgreich gespeichert wurde.
+Nachbedingungen: Der neue Datensatz ist in der CSV-Datei vorhanden und korrekt formatiert.
+
+Korrekturablauf: Bei ungültigen Eingaben zeigt die Software eine entsprechende Fehlermeldung an, und der Benutzer kann die Eingabe korrigieren.
+
+Ablauf einer Abfrage:
+
+Der Benutzer wählt in der gegebenen Auswahl "Daten anzeigen"
+Der Benutzer gibt ein Filterkriterium ein (Filterkriterium wird abgefragt) zur Identifikation eines bestehenden Mitglieds.
+Die Software filtert die Mitgliederdaten entsprechend den eingegebenen Kriterien.
+Die gefundenen Mitgliedsdaten werden dem Benutzer angezeigt.
+(nur Erweiterung) Der Benutzer kann die angezeigten Daten bearbeiten oder weitere Aktionen ausführen (z. B. speichern, E-Mail senden).
+Nachbedingungen: Die gefilterten Mitgliedsdaten werden korrekt angezeigt.
+
+(nur Erweiterung) Ablauf der E-Mail-Erstellung:
+
+Der Benutzer wählt in der gegebenen Auswahl "Ein Mail versenden"
+Der Benutzer wählt das Mitglied aus, an das eine E-Mail gesendet werden soll.
+Die Software erstellt automatisch eine E-Mail, basierend auf den zugewiesenen Mitgliedsdaten (z. B. Name, Beitrag).
+Der Benutzer hat die Möglichkeit, den E-Mail-Inhalt zu überprüfen und anzupassen.
+Die E-Mail wird an die hinterlegte Adresse des Mitglieds versendet.
+Eine Bestätigungsmeldung erscheint, dass die E-Mail erfolgreich versendet wurde.
+Nachbedingungen: Die E-Mail wird erfolgreich versendet und an die angegebene Adresse des Mitglieds zugestellt.
+
+How to Install:
+
+Voraussetzungen: CLion (IDE von JetBrains) Compiler (z. B. GCC für Linux, MinGW für Windows oder Xcode Command Line Tools für macOS) Git (um Das Repository zu clonen)
+
+Projekt herunterladen: Lade dir den Projektordner herunter. zip oder das Repository klonen git clone https://github.com/dein-benutzername/vereinsverwaltung.git Öffne CLion und wähle „Open Project“ → navigiere zum Ordner des Projekts und öffne ihn.
+
+Programm ausführen: Warte, bis CLion das Projekt vollständig indexiert hat. Klicke auf Build. oder ctr.F9 (Windows) Starte das Programm über das Pfeil Symbol oben rechts oder über Run.
+
+Ipsum Lorem
