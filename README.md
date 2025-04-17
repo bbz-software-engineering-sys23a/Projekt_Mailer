@@ -89,7 +89,7 @@ How to Install:
 Voraussetzungen:
 - CLion (IDE von JetBrains)
 - Compiler (z. B. GCC für Linux, MinGW für Windows oder Xcode Command Line Tools für macOS)
-- Git (um Das Repository zu clonen)
+- Git (um Das Repository zu clonen)(optional)
 
 Projekt herunterladen:
 - Lade dir den Projektordner herunter. zip oder das Repository klonen, git clone[ https://github.com/bbz-software-engineering-sys23a/Projekt_Mailer.git
