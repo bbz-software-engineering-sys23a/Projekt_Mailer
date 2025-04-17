@@ -8,7 +8,7 @@ Projektbeschreibung:
 
 Use Case:
 
-How to Install:
+Anleitung fürs Programm:
 
 ## Projektbeschreibung:
 
@@ -92,7 +92,7 @@ Die gefilterten Mitgliedsdaten werden korrekt angezeigt.
 Nachbedingungen:
 Die E-Mail wird erfolgreich versendet und an die angegebene Adresse des Mitglieds zugestellt.
 
-## How to Install:
+## Anleitung fürs Programm:
 
 Voraussetzungen:
 - CLion (IDE von JetBrains)
