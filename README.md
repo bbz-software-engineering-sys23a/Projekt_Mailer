@@ -168,7 +168,7 @@ Stephan: Funktionalität Merges & Fehlerbehandlung
 - Merge Input
 - Fehlerbehandlung bei Falscheingaben
 
-## Abgebrochen:
+Abgebrochen:
 - E-Mail-Funktion (nicht fertiggestellt)
 
 ## Mittwoch Morgen:
@@ -191,7 +191,7 @@ Stephan: Merge Klassen & Code-Optimierung
 - Überarbeitung der Textausgabe
 - Output
 
-## Abgebrochen:
+Abgebrochen:
 - GUI (nicht abgeschlossen)
 
 ## Donnerstag Morgen:
