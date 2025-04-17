@@ -89,10 +89,10 @@ How to Install:
 Voraussetzungen:
 - CLion (IDE von JetBrains)
 - Compiler (z. B. GCC für Linux, MinGW für Windows oder Xcode Command Line Tools für macOS)
-- Git (um Das Repository zu clonen)(optional)
+- Git (um das Repository zu clonen)(optional)
 
 Projekt herunterladen:
-- Lade dir den Projektordner herunter. zip oder das Repository klonen, git clone[ https://github.com/bbz-software-engineering-sys23a/Projekt_Mailer.git
+- Lade Dir den Projektordner . zip oder das Repository herunter. Zum klonen, git clone[ https://github.com/bbz-software-engineering-sys23a/Projekt_Mailer.git
 - Öffne CLion und wähle „Open Project“ → navigiere zum Ordner des Projekts und öffne ihn.
 
 
@@ -102,13 +102,13 @@ Programm ausführen:
 - Starte das Programm über das Pfeil Symbol oben rechts oder über Run.
 
 
-// Flussdiagramm
+ Flussdiagramm
 
 ![Flussdiagramm](/Flussdiagramm.png)
 
-//Systemsequenzdiagramm
+/Systemsequenzdiagramm
 
 ![Systemsequenzdiagramm](Systemsequenzdiagramm.png)
-Ipsum Lorem 
+
 
 
