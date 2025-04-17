@@ -37,14 +37,14 @@ Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadre
 
 
 ## Use Case: 
-- Mitgliedsdaten erfassen und speichern
-- Mitgliedsdaten Auslesen
+- Mitgliederdaten erfassen und speichern
+- Mitgliederdaten Auslesen
 - E-mail versenden
-- 
+  
 Akteur: Vereinsmitarbeiter/in (z. B. Sekretariat)
 
 Ziel: 
-- Erfassung der Mitgliedsdaten und Speicherung in der CSV-Datei
+- Erfassung der Mitgliederdaten und Speicherung in der CSV-Datei
 - Abruf der Mitgliederdaten
 - (nur Erweiterung)Email versenden
   
