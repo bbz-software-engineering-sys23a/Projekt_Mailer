@@ -2,7 +2,7 @@
 
 Autoren: Kai Knezevic / Peter Meier / Stephan Fankhauser
 
-##Inhaltsverzeichniss:
+## Inhaltsverzeichniss:
 
 Projektbeschreibung:
 
