@@ -107,9 +107,11 @@ Projekt herunterladen:
 
 Programm ausführen:
 - Am einfachsten lässt sich das Programm über die ZIP-Datei im Ordner Projekt_Mailer ausführen ->einfach die enthaltene .exe Datei starten.
+  oder
 - Warte, bis CLion das Projekt vollständig indexiert hat.
 - Klicke auf Build. oder ctr.F9 (Windows)
 - Starte das Programm über das Pfeil Symbol oben rechts oder über Run.
+  oder
 - Vorzugsweise wird das Programm über die Datei Projekt_Mailer.exe im Verzeichnis mailer/CMake/Build/Debug ausgeführt.
 - Die Mitgliederliste wird anschließend in der Datei adresse.csv angezeigt.
 
