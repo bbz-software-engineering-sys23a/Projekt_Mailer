@@ -1,10 +1,54 @@
 Mitglied-Nr.;Name;Vorname;Strasse;Hausnummer;PLZ;Wohnort;E-Mail;Tel.Nr.;Geschlecht;Typ
-1;Meier;Peter;Gasse;11;8201;Schaffhausen;pm@ffch1;111111;m;a
-2;Mueller;Hans;Gasse;12;8202;Schaffhause;pm@ffch2;222222;m;a
-3;Manser;Walter;Gasse;13;8303;Schaffhaus;pm@ffch3;333333;m;p
-4;Schmidt;Gertrud;Gasse;14;8204;Schaffhau;pm@ffch4;444444;m;p
-5;Franzen;Sandra;Gasse;15;8205;Schaffha;pm@ffch5;555555;w;e
-6;Bieri;Monika;Gasse;16;8206;Schaffh;pm@ffch6;666666;w;e
-7;Brand;Sepp;Gasse;17;8207;Schaf;pm@ffch7;777777;m;a
-8;Meier;Peter;Gasse;18;8208;Schaffhausen;pm@ffch8;888888;m;p
-9;Sager;Peter;Gasse;20;8209;Sch;pm@ffch9;999999;m;e
+1;Meier;Peter;Gasse;11;8201;Schaffhausen;pm@ffch1;111111;m;A
+2;Mueller;Hans;Gasse;12;8202;Schaffhause;pm@ffch2;222222;m;A
+3;Manser;Walter;Gasse;13;8303;Schaffhaus;pm@ffch3;333333;m;P
+4;Schmidt;Gertrud;Gasse;14;8204;Schaffhau;pm@ffch4;444444;m;P
+5;Franzen;Sandra;Gasse;15;8205;Schaffha;pm@ffch5;555555;w;E
+6;Bieri;Monika;Gasse;16;8206;Schaffh;pm@ffch6;666666;w;E
+7;Brand;Sepp;Gasse;17;8207;Schaf;pm@ffch7;777777;m;A
+8;Meier;Peter;Gasse;18;8208;Schaffhausen;pm@ffch8;888888;m;P
+9;Sager;Peter;Gasse;20;8209;Sch;pm@ffch9;999999;m;E
+10;Meierr;Peter;Rheinstrasse.;50;8200;Schaffhausen;pm@ffch;52111222;w;A
+11;Muellerr;Peter;Rheinstrasse.;48;8200;Schaffhausen;pm@ffch;52111222;w;A
+12;Muellerr;Peter;Rheinstrasse.;48;8200;Schaffhausen;pm@ffch;52111222;w;A
+13;gdrgd;grgreg;dggdre;444;;dfgdfgdg;dgdrgg;5555;2;P
+14;grdgrdsg;dfgsgdrsg;sgdsgdsg;gsgdf;gfdgdg;fgdfgdfg;dgdfgdfgd;fdgdfgdfg;;A
+15;dgdsg;sgdsgdg;gsdgsd;sgdfgs;gfdghdfg;gfdgdg;gffdgd;gdfgd;;E
+16;Fankhauser;Stephan;Endlikerstrasse;103;8400;Winterthur;stephan.fankhauser@bbz-sh.ch;798645255;;P
+17;Ibi;Dumm;bl ck;13;6666;Schlieren;no@spam.com;123456789;3;A
+18;m h;bl cj;blunb;13;666;Mond;juhu@welt.ch;34325;M;E
+19;ssdfsd;fsefes;fdsfsd;3;gdsgs;fsdfsd;fdfgsdf;fdsfsdf;N;P
+20;wwee;eewfsef;grrgr;;fdf;fsfsdg;fdsfsf;dsfsds;N;E
+21;Maier;Peter;Feuhrwerkstrasse; ;8000;Z rich;ibi@dumm.ch;123456789;N;P
+22;muls;FsfA;HEBE; ;85544;Blub;fsfggfs;5555;N;E
+23;sfges;sfesfesf;sdfsf;,;gdfd;ggd;gdgdg;dgd;N;E
+24;fdfs;sdfgsfg;sdfgfsg;4444;4444444;bbc;bvdfb;bcbb;N;E
+25;M ller;Hansueli;Bombenstrasse;13;666;Minenfeld;no@spam.com;1234567896;N;A
+26;sfsf;sfsdf;fsdfsf;44;44444;sdgdsgsg;sgfsdgsdg;417985664;M;A
+27;m;p;z;9;7;7;6;416;M;P
+28;meot;zui;gh;66;667;ikkl;jkkkk;41555;W;P
+29;Fankhauser;Stephan;Endlikerstrasse;103;8400;Winterthur;ste@phan.com;41798645552;M;A
+30;Fischer;Peter;ImBlub;24;-1;Minenfeld;d@bomb;41666;N;E
+31;M h;Kuh;-5;13;8400;Z rich;chirio@blah;4179556644;W;P
+32;dgdfg;gdgd;gdgg;4;9;gsdgd;dgdgd;419999;W;P
+33;Welt;Hunger;Bombe;13;666;Minenfeld;ffsfs;416543210;W;E
+34;Quack;Donald;fsf;78;888;Kuhfweld;FSDs;8888;M;A
+35;Meier;Peter;Reinstrasse;9;9999;Schafhausen;sadfdaaf;4188888;W;P
+36;Meier;Peter;Reinstrasse;9;9999;Schafhausen;sadfdaaf;4188888;W;P
+37;Mueller;Heinz;Feldstrasse;9;8000;Zuerich;ganz@geil.rocks;41798885312;M;P
+38;Fankhauser;Stephan;Endlickerstrasse;103;8400;interthur;no@spam.com;41447285513;M;P
+39;Maier;Peter;Seestrasse;55;2213;Seebach;kei@ahnig.de;41781332645;N;A
+40;Panzer;Paul;Pffstr.;11;84445;Dielsdorf;DE;415555;W;E
+41;Meier;Kai;Im_Melcher;13;5040;Bern;puh@meh.li;41763448712;W;P
+42;Mueller;Schlorz;Fge;55;4568;Scheisse;Blub@melcher;417895;M;E
+43;Bieri;Kurt;Lauenen;5;3780;Gstaad;kurt@ch;41337444444;M;A
+44;Kaffe;Billiger;Kaffebonen;4;666;Boomstadt;Kaffe@Boomstadt.ch;00418945556;M;E;10 SFr.
+45;Meier;Peter;Gasse;11;8201;Schaffhausen;pm@ffch1;111111;m;a
+46;Mueller;Hans;Gasse;12;8202;Schaffhause;pm@ffch2;222222;m;a
+47;Manser;Walter;Gasse;13;8303;Schaffhaus;pm@ffch3;333333;m;p
+48;Schmidt;Gertrud;Gasse;14;8204;Schaffhau;pm@ffch4;444444;m;p
+49;Franzen;Sandra;Gasse;15;8205;Schaffha;pm@ffch5;555555;w;e
+50;Bieri;Monika;Gasse;16;8206;Schaffh;pm@ffch6;666666;w;e
+51;Brand;Sepp;Gasse;17;8207;Schaf;pm@ffch7;777777;m;a
+52;Meier;Peter;Gasse;18;8208;Schaffhausen;pm@ffch8;888888;m;p
+53;Sager;Peter;Gasse;20;8209;Sch;pm@ffch9;999999;m;e
