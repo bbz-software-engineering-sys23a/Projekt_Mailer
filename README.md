@@ -11,15 +11,17 @@ Die Software berücksichtigt verschiedene Mitgliedsarten und zugehörige Mitglie
 
 Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadressen, erweitern den praktischen Nutzen der Anwendung.
 
-Anforderungen
-Funktion	Muss	Wunsch
-Daten erfassen	x	-
-Daten in CSV-Datei speichern	x	-
-Daten filtern und als String mit Trennzeichen";"ausgeben	X	-
-Falscheingaben abfangen	X	-
-Mitglieder-Art zuweisen und Mitlieder-Beitrag definieren	X	-
-Anhand des Datensatzes ein E-Mail generieren		X
-Anhand des ausgegebenen Adressen-Strings eine druckbare Adresse generieren	-	X
+## Anforderungen
+| Funktion                                                                   | Muss | Wunsch |
+|----------------------------------------------------------------------------|------|--------|
+| Daten erfassen                                                             | x    | -      |
+| Daten in CSV-Datei speichern                                               | x    | -      |
+| Daten filtern und als String mit Trennzeichen";"ausgeben                   | X    | -      |
+| Falscheingaben abfangen                                                    | X    | -      |
+| Mitglieder-Art zuweisen und Mitlieder-Beitrag definieren                   | X    | -      |
+| Anhand des Datensatzes ein E-Mail generieren                               |      | X      |
+| Anhand des ausgegebenen Adressen-Strings eine druckbare Adresse generieren | -    | X      |
+
 Use Case:
 
 Mitgliedsdaten erfassen und speichern
