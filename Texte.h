@@ -20,6 +20,7 @@ namespace Texte {
     const string Auswahl_1 = "\n 1) Daten erfassen \n 2) Daten anzeigen \n 3) Ein Mail versenden \n 4) Das Programm beenden \n";
     const string Auswahl_2 = "\n 1) Aktives Mitglied \n 2) Passives Mitglied \n 3) Ehrenmitglied \n";
     const string Auswahl_3 = "\n 1) Weiblich \n 2) Männlich \n 3) Neutral \n";
+    const string back_4 = " 4) Zurück ins Hauptmenu \n";
 
     // Hilfstexte
     const string Bitte_1 = "Bitte geben Sie ";

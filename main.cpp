@@ -303,9 +303,9 @@ void betragAnpassen() {
     string beitragAnpassen;
     string eingabe;
     int auswahl;
-    cout << Texte::Was_2 + Texte::Auswahl_2 << endl;
+    cout << Texte::Was_2 + Texte::Auswahl_2 + Texte::back_4 << endl;
     cin >> eingabe;
-    auswahl = falscheingabeAbfangen(eingabe,1,3,Texte::Was_2 + Texte::Auswahl_2);
+    auswahl = falscheingabeAbfangen(eingabe,1,4,Texte::Was_2 + Texte::Auswahl_2 + Texte::back_4);
     cout << "\n" << endl;
 
     switch (auswahl) {
@@ -313,22 +313,25 @@ void betragAnpassen() {
             cout << Texte::Bitte_1 + Texte::Betrag << endl;
             cin >> eingabe;
             auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Betrag);
-            beitragAnpassen = to_string(auswahl);
+            beitragAnpassen = to_string(auswahl) + " SFr.";
             Aktiv::setDefaultBeitrag(beitragAnpassen);
         break;
         case 2:
             cout << Texte::Bitte_1 + Texte::Betrag << endl;
             cin >> eingabe;
             auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Betrag);
-            beitragAnpassen = auswahl;
+            beitragAnpassen = to_string(auswahl)  + " SFr.";
             Passiv::setDefaultBeitrag(beitragAnpassen);
         break;
         case 3:
             cout << Texte::Bitte_1 + Texte::Betrag << endl;
             cin >> eingabe;
             auswahl = falscheingabeAbfangen(eingabe,2,0,Texte::Bitte_1 + Texte::Betrag);
-            beitragAnpassen = auswahl;
+            beitragAnpassen = to_string(auswahl) + " SFr.";
             Ehrenmitglied::setDefaultBeitrag(beitragAnpassen);
+        break;
+        case 4:
+            return;
         break;
     }
 }
