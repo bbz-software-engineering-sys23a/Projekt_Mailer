@@ -17,7 +17,7 @@ Im Rahmen dieses Projekts wird eine Software entwickelt, mit der Daten von Verei
 Die erfassten Informationen werden in einer CSV-Datei gespeichert. 
 Zusätzlich bietet die Anwendung die Möglichkeit, Datensätze nach bestimmten Kriterien zu filtern und über die Kommandozeile auszugeben.
 
-Die Software berücksichtigt verschiedene Mitgliedsarten und zugehörige Mitgliedsbeiträge.
+Die Software berücksichtigt verschiedene Mitgliederarten und zugehörige Mitgliedsbeiträge.
 Fehlerhafte Eingaben sollen automatisch erkannt und entsprechend behandelt werden.
 
 Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadressen, erweitern den praktischen Nutzen der Anwendung.
@@ -79,7 +79,7 @@ Ablauf einer Abfrage:
 5. (nur Erweiterung) Der Benutzer kann die angezeigten Daten bearbeiten oder weitere Aktionen ausführen (z. B. speichern, E-Mail senden).
 
 Nachbedingungen:
-Die gefilterten Mitgliedsdaten werden korrekt angezeigt.
+Die gefilterten Mitgliederdaten werden korrekt angezeigt.
 
 (nur Erweiterung) Ablauf der E-Mail-Erstellung:
 1. Der Benutzer wählt in der gegebenen Auswahl "Ein Mail versenden"
