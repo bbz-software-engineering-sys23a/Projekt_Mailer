@@ -40,11 +40,17 @@ namespace Texte {
 
     // Fehler
     const string Eingabe_ungültig = "Ungültige Eingabe\n";
+    const string Error_Speichern = "Fehler beim Speichern der Einstellungen\n;
+    const string Error_Typ = "Ungültiger Mitgliedstyp! ";
+    const string Error_Ausgabe = "keine Ausgabe möglich. \n ";
 
     // Rückmeldungen
     const string Angepasst = "Ihre Änderungen wurden gespeichert.\n";
     const string Betrag_A = "Der bisherige Mitgliederbeitrag ist: ";
     const string Betrag_N = "Der neue Mitgliederbeitrag ist: ";
+    const string Haupt_Wahl_1 = "Sie haben Daten erfassen gewählt\n";
+    const string Haupt_Wahl_2 = "Sie haben Daten anzeigen gewählt\n";
+    const string Haupt_Wahl_3 = "Sie haben Email versenden gewählt. \nAn wenn möchten sie ein Mail versenden?\n";
 
 }
 

@@ -69,15 +69,15 @@ int main()
 
         switch (auswahl) {
             case 1:
-                cout << "Sie haben Daten erfassen gewählt\n" << endl;
+                cout << Texte::Haupt_Wahl_1 << endl;
             datenErfassen();
             break;
             case 2:
-                cout << "Sie haben Daten anzeigen gewählt\n" << endl;
+                cout << Texte::Haupt_Wahl_2 << endl;
             datenAusgeben();
             break;
             case 3:
-                cout << "Sie haben Email versenden gewählt. \nAn wenn möchten sie ein Mail versenden?\n" << endl;
+                cout << Texte::Haupt_Wahl_3 << endl;
             mailVersenden();
             break;
             case 4:
@@ -112,7 +112,7 @@ void ladeConfig() {
 
 void saveConfig() {
     ofstream cfg("settings.cfg");
-    if (!cfg) { cerr<<"Fehler beim Speichern der Einstellungen\n"; return; }
+    if (!cfg) { cerr<< Texte::Error_Speichern; return; }
     cfg<<"counter="<<Mitglieder::getCounter()<<"\n"
        <<"A="      <<Aktiv::getDefaultBeitrag()      <<"\n"
        <<"P="      <<Passiv::getDefaultBeitrag()     <<"\n"
@@ -204,14 +204,14 @@ void datenErfassen() {
         delete mitglied;
         saveConfig();
     } else {
-        cout << "Ungültiger Mitgliedstyp – keine Ausgabe möglich." << endl;
+        cout << Texte::Error_Typ + "– " + Texte::Error_Ausgabe << endl;
     }
 }
 
 
 
 void datenAusgeben() {
-    cout << "Daten Ausgeben\n" << endl;
+    //cout << "Daten Ausgeben\n" << endl;
     string result = Mitglieder::filtern_csv();
     cout << result << "\n" << endl;
 }
