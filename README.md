@@ -83,7 +83,6 @@ Die gefilterten Mitgliedsdaten werden korrekt angezeigt.
 
 Nachbedingungen:
 Die E-Mail wird erfolgreich versendet und an die angegebene Adresse des Mitglieds zugestellt.
-![d44808b4-f44e-481b-8a47-f65218fad9ee](https://github.com/user-attachments/assets/baa47ec9-682d-4a51-83ee-87b655d23389)
 
 How to Install:
 
@@ -96,10 +95,13 @@ Projekt herunterladen:
 - Lade dir den Projektordner herunter. zip oder das Repository klonen, git clone[ https://github.com/bbz-software-engineering-sys23a/Projekt_Mailer.git
 - Öffne CLion und wähle „Open Project“ → navigiere zum Ordner des Projekts und öffne ihn.
 
+
 Programm ausführen:
 - Warte, bis CLion das Projekt vollständig indexiert hat.
 - Klicke auf Build. oder ctr.F9 (Windows)
 - Starte das Programm über das Pfeil Symbol oben rechts oder über Run.
+  
+![d44808b4-f44e-481b-8a47-f65218fad9ee](https://github.com/user-attachments/assets/baa47ec9-682d-4a51-83ee-87b655d23389)
 
 Ipsum Lorem 
 
