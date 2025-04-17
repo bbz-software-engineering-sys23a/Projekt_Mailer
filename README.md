@@ -25,8 +25,8 @@ Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadre
 ## Anforderungen:
 | Funktion                                                                   | Muss | Wunsch |
 |----------------------------------------------------------------------------|------|--------|
-| Daten erfassen                                                             | x    | -      |
-| Daten in CSV-Datei speichern                                               | x    | -      |
+| Daten erfassen                                                             | X    | -      |
+| Daten in CSV-Datei speichern                                               | X    | -      |
 | Daten filtern und als String mit Trennzeichen";"ausgeben                   | X    | -      |
 | Falscheingaben abfangen                                                    | X    | -      |
 | Mitglieder-Art zuweisen und Mitlieder-Beitrag definieren                   | X    | -      |
