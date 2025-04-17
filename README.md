@@ -10,6 +10,10 @@ Use Case:
 
 Anleitung fürs Programm:
 
+Fazit:
+
+Scrum Meetings:
+
 ## Projektbeschreibung:
 
 Im Rahmen dieses Projekts wird eine Software entwickelt, mit der Daten von Vereinsmitgliedern erfasst, verarbeitet und gespeichert werden können.
@@ -116,6 +120,97 @@ oder
 oder
 - Vorzugsweise wird das Programm über die Datei Projekt_Mailer.exe im Verzeichnis mailer/CMake/Build/Debug ausgeführt.
 - Die Mitgliederliste wird anschließend in der Datei adresse.csv angezeigt.
+
+
+## Fazit:
+
+| Funktion / Kriterium | Pflicht / Wunsch | Erfüllt?
+|--------------------------------------------------------------|-----------|-----------|
+| Mitgliederdaten erfassen                                     | Muss      |  Ja       |
+| Speicherung der Daten in einer CSV-Datei                     | Muss      |  Ja       |
+| Daten filtern und als String mit Trennzeichen „;“ ausgeben   | Muss      |  Ja       |
+| Fehlerhafte Eingaben erkennen und behandeln                  | Muss      |  Ja       |
+| Mitgliederart zuweisen und Mitgliederbeitrag berechnen       | Wunsch    |  Ja       |
+| E-Mail automatisch erstellen anhand eines Datensatzes        | Wunsch    | Teilweise |
+| Druckbare Adresse anhand des Adress-Strings generieren       | Wunsch    | Teilweise |
+
+ # Scrum Meetings:
+ 
+## Rollenverteilung:
+Projektmaster: Stephan Fankhauser
+Projektmanager: Peter Meier
+
+## Montag Nachmittag:
+- Sprint-Ziel: Projektgrundlagen legen
+- Aufgabenverteilung:
+Kai: Klassenerstellung
+Peter: Input/Output → Input
+Stephan: Main-Schleife
+
+## Sprint 1 – Erreicht:
+ - Klassenerstellung
+ - Input
+ - Main-Schleife
+ 
+## Dienstag Morgen:
+- Aufgabenverteilung:
+Kai: Funktion „E-Mail versenden“
+Peter: Output
+Stephan: Input-Merge sicherstellen
+
+## Dienstag Nachmittag:
+- Aufgabenverteilung:
+Kai: GUI
+Peter: Output
+Stephan: Funktionalität Merges & Fehlerbehandlung
+
+## Sprint 2 – Erreicht:
+- Merge Input
+- Fehlerbehandlung bei Falscheingaben
+
+## Abgebrochen:
+- E-Mail-Funktion (nicht fertiggestellt)
+
+## Mittwoch Morgen:
+- Aufgabenverteilung:
+Kai: Weitere Klassenarbeit
+Peter: Output
+Stephan: Textausgaben überarbeiten
+
+## Mittwoch Nachmittag:
+- Aufgabenverteilung:
+Kai: Mitgliederbeitrag-Funktion
+Peter: Output
+Stephan: Merge Klassen & Code-Optimierung
+
+## Sprint 3 – Erreicht:
+- Erweiterte Klassenstruktur
+- Mitgliederbeitrag-Funktion
+- Code-Optimierung
+- Merge Klassen
+- Überarbeitung der Textausgabe
+- Output
+
+## Abgebrochen:
+- GUI (nicht abgeschlossen)
+
+## Donnerstag Morgen:
+- Aufgabenverteilung:
+Kai: Daten speichern & Start der Dokumentation
+Peter: Flussdiagramm & Readme
+Stephan: Debugging
+
+## Donnerstag Nachmittag:
+- Aufgabenverteilung:
+Kai: Dokumentation & Readme
+Peter: Sequenzdiagramm & Readme
+Stephan: Weiteres Debugging
+
+## Sprint 4 – Erreicht:
+- Debugging abgeschlossen
+- Readme erstellt
+- Projektdokumentation finalisiert
+
 
   
 ## Flussdiagramm:
