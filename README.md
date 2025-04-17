@@ -2,7 +2,7 @@
 
 Autoren: Kai Knezevic / Peter Meier / Stephan Fankhauser
 
-## Projektbeschreibung:**
+## Projektbeschreibung:
 
 Im Rahmen dieses Projekts wird eine Software entwickelt, mit der Daten von Vereinsmitgliedern erfasst, verarbeitet und gespeichert werden können.
 
@@ -28,7 +28,7 @@ Zusätzliche optionale Funktionen, wie das Generieren von E-Mails oder Druckadre
 
 
 
-Use Case: 
+## Use Case: 
 - Mitgliedsdaten erfassen und speichern
 - Mitgliedsdaten Auslesen
 - E-mail versenden
@@ -84,7 +84,7 @@ Die gefilterten Mitgliedsdaten werden korrekt angezeigt.
 Nachbedingungen:
 Die E-Mail wird erfolgreich versendet und an die angegebene Adresse des Mitglieds zugestellt.
 
-How to Install:
+## How to Install:
 
 Voraussetzungen:
 - CLion (IDE von JetBrains)
@@ -103,5 +103,14 @@ Programm ausführen:
   
 ![d44808b4-f44e-481b-8a47-f65218fad9ee](https://github.com/user-attachments/assets/baa47ec9-682d-4a51-83ee-87b655d23389)
 
-Ipsum Lorem 
+## Flussdiagramm
+
+![Flussdiagramm](/Flussdiagramm.png)
+
+## Systemsequenzdiagramm
+
+![Systemsequenzdiagramm](Systemsequenzdiagramm.png)
+
+
+End
 
