@@ -92,8 +92,7 @@ Voraussetzungen:
 - Git (um Das Repository zu clonen)
 
 Projekt herunterladen:
-- Lade dir den Projektordner herunter. zip oder das Repository klonen 
-- git clone https://github.com/dein-benutzername/vereinsverwaltung.git
+- Lade dir den Projektordner herunter. zip oder das Repository klonen, git clone[ https://github.com/bbz-software-engineering-sys23a/Projekt_Mailer.git
 - Öffne CLion und wähle „Open Project“ → navigiere zum Ordner des Projekts und öffne ihn.
 
 Programm ausführen:
