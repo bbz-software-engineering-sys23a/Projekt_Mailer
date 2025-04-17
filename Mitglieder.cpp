@@ -7,6 +7,13 @@
 #include "Passiv.h"
 #include "Ehrenmitglied.h"
 
+#include <vector>
+#include <fstream>
+#include <filesystem>
+#include <sstream>
+#include <limits>
+#include <iostream>
+
 int Mitglieder::MitgliedernummerCounter = 1;
 
 // Persistenz Counter Mitgliedernummer
@@ -98,7 +105,7 @@ bool Mitglieder::schreiben_csv() const {
           << Geschlecht << ";"
           << typLetter << ";"
           << Geldbetrag << "\n";
-    cout << "Adresszeile erfolgreich hinzugefuegt!\n" << endl;
+    cout << "Mitglied erfolgreich hinzugefügt!\n" << endl;
     return true;
 }
 
@@ -117,7 +124,7 @@ string Mitglieder::filtern_csv() {
     };
 
     cout << "\nNach welcher Spalte möchten Sie filtern?\n";
-    // Für die Filterung nutzen wir die ersten 11 Spalten (letzte Spalte ist Mitgliederbeitrag)
+
     for (size_t i = 0; i < spalten.size(); ++i)
     {
         cout << i << ": " << spalten[i] << endl;
@@ -131,27 +138,27 @@ string Mitglieder::filtern_csv() {
         {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cerr <<"Ungültige Eingabe. Bitte eine ganze Zahl eingeben.\n";
+            cerr << Texte::Eingabe_ungültig << endl;
             continue;
         }
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         if (spaltenIndex < 0 || spaltenIndex >= static_cast<int>(spalten.size()))
         {
-            cerr << "Ungültiger Spaltenindex. Bitte einen Wert zwischen 0 und " << spalten.size() - 1 << " eingeben.\n";
+            cerr << Texte::Eingabe_ungültig <<"Bitte einen Wert zwischen 0 und " << spalten.size() - 1 << " eingeben.\n";
             continue;
         }
         break;
     }
-    cout << "Suchbegriff eingeben: ";
+    cout << Texte::Bitte_1 << "den Suchbegriff ein: " << endl;
     string suchbegriff;
     getline(cin, suchbegriff);
 
     string zeile;
     bool ersteZeile = true;
-    bool gefunden = false;
+    //bool gefunden = false;
     vector<vector<string>> treffer;
 
-    cout << "\n--- Gefundene Einträge ---\n";
+    //cout << "\n--- Gefundene Einträge ---\n";
     while (getline(datei, zeile))
     {
         if (ersteZeile)
@@ -169,15 +176,15 @@ string Mitglieder::filtern_csv() {
         if (spaltenIndex < felder.size() && felder[spaltenIndex].find(suchbegriff) != string::npos)
         {
             treffer.push_back(felder);
-            for (size_t i = 0; i < felder.size(); ++i)
-            {
+            /*for (size_t i = 0; i < felder.size(); ++i)
+            {*/
                 /*cout << felder[i];
                 if (i < felder.size() - 1)
                     cout << ";";
             }
             cout << endl;
             gefunden = true;*/
-                cout<<felder[i]<<(i+1<felder.size() ? ";" : "");
+                /*cout<<felder[i]<<(i+1<felder.size() ? ";" : "");
             }
             string typString = felder[10];
             string beitrag;
@@ -187,12 +194,13 @@ string Mitglieder::filtern_csv() {
             cout<<";"<<beitrag<<"\n";
 
             treffer.push_back(felder);
-            gefunden = true;
+            gefunden = true;*/
         }
     }
-    if (!gefunden)
+    //if (!gefunden)
+    if (treffer.empty())
     {
-        cout << "Keine passenden Einträge gefunden.\n";
+        cout << "Keine passenden Einträge gefunden.\n" << endl;
         return "";
     }
     // Falls genau ein Treffer besteht, liefern wir diesen zurück.
@@ -207,20 +215,24 @@ string Mitglieder::filtern_csv() {
                            zeile[3] + ";" + zeile[4] + ";" + zeile[5] + ";" +
                            zeile[6] + ";" + zeile[7] + ";" + zeile[8] + ";" +
                            zeile[9] + ";" + zeile[10];
+
+        // Dynamisches Anhängen des Mitgliederbeitrags
         string typString = zeile[10];
         if      (typString=="A") beitrag = Aktiv::getDefaultBeitrag();
         else if (typString=="P") beitrag = Passiv::getDefaultBeitrag();
         else if (typString=="E") beitrag = Ehrenmitglied::getDefaultBeitrag();
             //if (zeile.size() == 12)
+                // Rückgeben des Datensatzes mit angepasstem Beitrag.
                 zusammenhang += ";" + beitrag;
        /* }*/
+        cout << "\nGefundener Eintrag: \n" << endl;
         return zusammenhang;
     }
     // Bei mehreren Treffern: Detailabfrage durchführen
     if (treffer.size() > 1)
     {
-        cout << "\nMehrere Eintraege gefunden.\n";
-        cout << "Bitte Mitgliedsnummer eingeben fuer Detailansicht: ";
+        cout << "\nMehrere Einträge gefunden.\n" << endl;
+        cout << "Bitte Mitgliedsnummer eingeben für Detailansicht: " << endl;
         string mitgliedsnr;
         getline(cin, mitgliedsnr);
         for (const auto& zeile : treffer)
@@ -244,7 +256,7 @@ string Mitglieder::filtern_csv() {
                 return zusammenhang;
             }
         }
-        cout << "Mitgliedsnummer nicht in der Auswahl gefunden.\n";
+        cout << "Mitgliedsnummer nicht in der Auswahl gefunden.\n" << endl;
         return "";
     }
     return "";
