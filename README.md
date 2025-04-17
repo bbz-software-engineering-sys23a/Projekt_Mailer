@@ -83,6 +83,7 @@ Die gefilterten Mitgliedsdaten werden korrekt angezeigt.
 
 Nachbedingungen:
 Die E-Mail wird erfolgreich versendet und an die angegebene Adresse des Mitglieds zugestellt.
+![d44808b4-f44e-481b-8a47-f65218fad9ee](https://github.com/user-attachments/assets/baa47ec9-682d-4a51-83ee-87b655d23389)
 
 How to Install:
 
